@@ -9,8 +9,9 @@ namespace Assignments
     internal class Student
     {
         string fullName,grade;
-        int mark1, mark2,mark3,total;
-        double average;
+        double mark1, mark2,mark3;
+
+        
 
         public Student(string fullName, int mark1, int mark2, int mark3)
         {
@@ -22,14 +23,31 @@ namespace Assignments
 
         public double CalculateAverage()
         {
-            int total=mark1 + mark2 + mark3;
+            double total=Total();
             double average = total / 3;
             return average;
         }
         public double Total()
         {
-            int total = mark1 + mark2 + mark3;
+            double total = mark1 + mark2 + mark3;
             return total;
+        }
+
+        public string Grade()
+        {
+            double average = CalculateAverage();
+            if (average >89)
+                return "A";
+            else if (average >79 && average < 90)
+                return "B";
+            else if (average > 69 && average <80)
+                return "C";
+            else if (average >59 && average <70)
+                return "D";
+            else if(average>49 && average<60)
+                return "E";
+            else
+                return "F";            
         }
     }
 }

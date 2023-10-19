@@ -75,3 +75,4 @@ using Basic_Programs;
 
 ArraysExample arraysExample = new ArraysExample();
 arraysExample.OneDimensional();
+arraysExample.TwoDimensional();

@@ -11,7 +11,7 @@ namespace Basic_Programs
         private int empId;
         private string? empName,department;
         private double basicPay;
-
+        private readonly int _bonus=10;
         public Employee(int empId, string? empName, string? department, double basicPay)
         {
             EmpId = empId;
@@ -24,6 +24,8 @@ namespace Basic_Programs
         public string? EmpName { get => empName; set => empName = value; }
         public string? Department { get => department; set => department = value; }
         public double BasicPay { get => basicPay; set => basicPay = value; }
+
+        public int Bonus => _bonus;
 
         public double CalculateSalary()
         {

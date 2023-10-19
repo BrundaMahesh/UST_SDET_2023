@@ -51,12 +51,19 @@ using Basic_Programs;
 //Calculation calculation = new Calculation();
 //int firstNumber = Convert.ToInt32(Console.ReadLine());
 //int secondNumber = Convert.ToInt32(Console.ReadLine());
-
 //double sum = calculation.Add(firstNumber, secondNumber);
 //Console.WriteLine(sum);
 
 
 
 //Electricity electricity = new Electricity(); //default constructor
-Electricity electricity= new Electricity(10001,9000,9300,"Raj"); //parameterised constructor
-Console.WriteLine($"Bill Amount=" +electricity.CalculateBill());
+//Electricity electricity= new Electricity(10001,9000,9300,"Raj"); //parameterised constructor
+//Console.WriteLine($"Bill Amount=" +electricity.CalculateBill());
+
+
+Employee employee = new Employee(101, "Anusha", "IT", 10000);
+Console.WriteLine($"EmpId=" +employee.EmpId);
+Console.WriteLine($"EmpName=" +employee.EmpName);
+Console.WriteLine($"Department=" +employee.Department);
+Console.WriteLine($"Basic pay=" +employee.BasicPay);
+Console.WriteLine($"Net Salary=" +employee.CalculateSalary());

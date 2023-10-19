@@ -28,9 +28,9 @@ namespace Basic_Programs
         public double CalculateSalary()
         {
             double grossSalary, netSalary;
-            double allowances = BasicPay * 0.3 + BasicPay * 0.2 + BasicPay * 0.15;
+            double allowances = BasicPay * 0.3 + BasicPay * 0.2 + BasicPay * 0.15; //HRA+DA+CAA
             grossSalary = BasicPay + allowances;
-            double deductions = BasicPay * 0.1;
+            double deductions = BasicPay * 0.1; //EPF=10%
             netSalary = grossSalary-deductions;
             return netSalary;
         }

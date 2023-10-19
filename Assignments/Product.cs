@@ -18,9 +18,9 @@ namespace Assignments
 
         public Product(string productName, double price, int quantity)
         {
-            this.ProductName = productName;
-            this.Price = price;
-            this.Quantity = quantity;
+            ProductName = productName;
+            Price = price;
+            Quantity = quantity;
         }
 
         public void SetPrice(double newPrice) 
@@ -32,11 +32,6 @@ namespace Assignments
             return  Price*Quantity;
         }
 
-        public void Display()
-        {
-            Console.WriteLine($"Product Name:" + ProductName);
-            Console.WriteLine($"Price:" + Price);
-            Console.WriteLine($"Quantity:" + Quantity);
-        }
+       
     }
 }

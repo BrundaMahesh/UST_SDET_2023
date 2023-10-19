@@ -36,7 +36,7 @@ namespace Basic_Programs
             }
         }
 
-
+        /////Two dimensional array
         public void TwoDimensional()
         {
             //nums[0, 0] = 100;
@@ -50,5 +50,37 @@ namespace Basic_Programs
                 Console.WriteLine(item);
             }
         }
+
+        ///////Jagged Array//////
+        public void JaggedArray()
+        {
+            int[][,] arr = new int[][,]
+            {
+                new int[,] {{ 100, 200 }, { 300,400} },
+                new int[,] {{500,600},{700,800},{900,100}},
+                new int[,] {{600,200},{400,100},{500,300}}
+            };
+            Console.WriteLine("Jagged Array:");
+            foreach (var item in arr)
+            {
+                Console.WriteLine(item[0, 1]);
+            }
+            Console.WriteLine();
+            for (int i=0; i<arr.Length; i++)
+            {
+                int x = 0;
+                for (int j = 0; j < arr[i].GetLength(x);j++)
+                {
+                    for(int k = 0; k < arr[j].Rank;k++)
+                    {
+                        Console.Write(arr[i][j, k] + " ");
+                    }
+                    Console.WriteLine();
+                }
+                x++;
+                Console.WriteLine() ;
+            }
+        }
+        
     }
 }

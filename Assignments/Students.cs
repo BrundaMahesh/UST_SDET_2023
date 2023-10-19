@@ -27,21 +27,6 @@ namespace Assignments
             return Marks.Average();
         }
 
-        //public char CalculateGrade()
-        //{
-        //    double average = CalculateAverage();
-        //    if (average >= 90)
-        //        return 'A';
-        //    else if (average >= 80)
-        //        return 'B';
-        //    else if (average >= 70)
-        //        return 'C';
-        //    else if (average >= 60)
-        //        return 'D';
-        //    else
-        //        return 'F';
-        //}
-
         public string GetMarksSummary()
         {
             int highestMarks = Marks.Max();

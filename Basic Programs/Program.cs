@@ -61,12 +61,17 @@ using Basic_Programs;
 //Console.WriteLine($"Bill Amount=" +electricity.CalculateBill());
 
 
-Employee employee = new Employee(101, "Anusha", "IT", 10000);
-Console.WriteLine($"EmpId=" +employee.EmpId);
-Console.WriteLine($"EmpName=" +employee.EmpName);
-Console.WriteLine($"Department=" +employee.Department);
-Console.WriteLine($"Basic pay=" +employee.BasicPay);
-Console.WriteLine($"Net Salary=" +employee.CalculateSalary());
 
-Console.WriteLine("\nEmpId:{0}\n" + "EmpName:{1}\n" + "Department:{2}\n" + "Basic Pay:{3}", employee.EmpId,employee.EmpName,employee.Department,employee.BasicPay);
-Console.WriteLine("Net salary:{0}" ,employee.CalculateSalary());
+//Employee employee = new Employee(101, "Anusha", "IT", 10000);
+//Console.WriteLine($"EmpId=" +employee.EmpId);
+//Console.WriteLine($"EmpName=" +employee.EmpName);
+//Console.WriteLine($"Department=" +employee.Department);
+//Console.WriteLine($"Basic pay=" +employee.BasicPay);
+//Console.WriteLine($"Net Salary=" +employee.CalculateSalary());
+
+//Console.WriteLine("\nEmpId:{0}\n" + "EmpName:{1}\n" + "Department:{2}\n" + "Basic Pay:{3}", employee.EmpId,employee.EmpName,employee.Department,employee.BasicPay);
+//Console.WriteLine("Net salary:{0}" ,employee.CalculateSalary());
+
+
+ArraysExample arraysExample = new ArraysExample();
+arraysExample.OneDimensional();

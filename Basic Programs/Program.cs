@@ -68,12 +68,25 @@ using Basic_Programs;
 //Console.WriteLine($"Department=" +employee.Department);
 //Console.WriteLine($"Basic pay=" +employee.BasicPay);
 //Console.WriteLine($"Net Salary=" +employee.CalculateSalary());
-
 //Console.WriteLine("\nEmpId:{0}\n" + "EmpName:{1}\n" + "Department:{2}\n" + "Basic Pay:{3}", employee.EmpId,employee.EmpName,employee.Department,employee.BasicPay);
 //Console.WriteLine("Net salary:{0}" ,employee.CalculateSalary());
 
 
-ArraysExample arraysExample = new ArraysExample();
-arraysExample.OneDimensional();
-arraysExample.TwoDimensional();
-arraysExample.JaggedArray();
+//ArraysExample arraysExample = new ArraysExample();
+//arraysExample.OneDimensional();
+//arraysExample.TwoDimensional();
+//arraysExample.JaggedArray();
+
+
+//StudentMarks studentMarks = new StudentMarks(101,"Ashwin","Mysore");
+StudentGrade studentGrade= new StudentGrade();
+studentGrade.RollNo=100;
+studentGrade.StudentName = "Ashwin";
+studentGrade.City = "Mysore";
+studentGrade.Mark1 = 60;
+studentGrade.Mark2 = 80;
+studentGrade.Mark3 = 90;
+studentGrade.DisplayStudentDetails();
+Console.WriteLine("Total:" + studentGrade.CalculateTotal());
+Console.WriteLine("Average:" + studentGrade.CalculateAverage());
+Console.WriteLine("Grade:" + studentGrade.CalculateGrade());

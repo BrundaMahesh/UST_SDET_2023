@@ -22,30 +22,52 @@
 //}
 
 
-Students[] students = new Students[]
-{
- new Students("Ajay","C", new int[] {50,40,80}),
- new Students("Sanjana","B", new int[] {70,60,80}),
- new Students("Anu","A", new int[] {90,70,80})
-};
+//Students[] students = new Students[]
+//{
+// new Students("Ajay","C", new int[] {50,40,80}),
+// new Students("Sanjana","B", new int[] {70,60,80}),
+// new Students("Anu","A", new int[] {90,70,80})
+//};
 
-Console.WriteLine("Student details");
-Console.WriteLine("***************");
-foreach (var student in students)
-{
-    Console.WriteLine("Student Name:" +student.Name);
-    double[] marks = new double[3];
-    double total = 0;
-    Console.Write("Marks:");
-    for (int i = 0;i<marks.Length;i++)
-    {
-        marks[i] = student.Marks[i];
-        total = total + marks[i];
-        Console.Write(marks[i] + " ");
-    }
-    Console.WriteLine("\nTotal:" +total);
-    Console.WriteLine("Average:" + student.CalculateAverage());
-    Console.WriteLine("Grade:" + student.Grade);
-    Console.WriteLine(student.GetMarksSummary());
-}
+//Console.WriteLine("Student details");
+//Console.WriteLine("***************");
+//foreach (var student in students)
+//{
+//    Console.WriteLine("Student Name:" +student.Name);
+//    double[] marks = new double[3];
+//    double total = 0;
+//    Console.Write("Marks:");
+//    for (int i = 0;i<marks.Length;i++)
+//    {
+//        marks[i] = student.Marks[i];
+//        total = total + marks[i];
+//        Console.Write(marks[i] + " ");
+//    }
+//    Console.WriteLine("\nTotal:" +total);
+//    Console.WriteLine("Average:" + student.CalculateAverage());
+//    Console.WriteLine("Grade:" + student.Grade);
+//    Console.WriteLine(student.GetMarksSummary());
+//}
+
+
+ElectronicsProduct electronicsProduct= new ElectronicsProduct("TV",10000,2,1);
+//Console.WriteLine($"Product Name:" +electronicsProduct.ProductName 
+//    + "\n" +"Price:" +electronicsProduct.Price +"\n" +"Quantity:"+electronicsProduct.Quantity);
+electronicsProduct.DisplayElectronicsProduct();
+Console.WriteLine(electronicsProduct.ProductValue()); 
+
+
+DigitalProduct digitalProduct = new DigitalProduct("Mobile", 50000, 5, 6, "Mp3");
+//Console.WriteLine($"Product Name:" + digitalProduct.ProductName
+//    + "\n" + "Price:" + digitalProduct.Price + "\n" + "Quantity:" + digitalProduct.Quantity);
+digitalProduct.DisplayDigitalProduct();
+Console.WriteLine(digitalProduct.ProductValue()); 
+
+
+ClothingProduct clothingProduct = new ClothingProduct("T-shirt", 2500, 5, "Large");
+//Console.WriteLine($"\nProduct Name:" + clothingProduct.ProductName
+//    + "\n" + "Price:" + clothingProduct.Price + "\n" + "Quantity:" + clothingProduct.Quantity);
+clothingProduct.DisplayClothingProduct();
+Console.WriteLine(clothingProduct.ProductValue());
+
 

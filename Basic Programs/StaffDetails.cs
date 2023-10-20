@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Basic_Programs
 {
-    internal class StaffDetails
+    internal class StaffDetails:College
     {
         public int StaffId {  get; set; }
         public string? Name { get; set; }

@@ -92,28 +92,33 @@ using Basic_Programs;
 //Console.WriteLine("Grade:" + studentGrade.CalculateGrade());
 
 
+
 Console.Write("1.Teaching Staff\n2.Non-Teaching Staff\n");
 int x=Convert.ToInt32(Console.ReadLine());
 switch(x)
 {
     case 1:
         TeachingStaff teachingStaff = new TeachingStaff();
+        teachingStaff.CollegeName = "NIE";
         teachingStaff.StaffId = 100;
         teachingStaff.Name = "Raj";
         teachingStaff.Department = "CS";
         teachingStaff.Specialization = "DBMS,DS";
         teachingStaff.Semester = 6;
+        teachingStaff.DisplayCollege();
         teachingStaff.DisplayStaffDetails();
         teachingStaff.DisplayTeachingStaffDetails();
         break;
 
     case 2:
         NonTeachingStaff nonTeachingStaff = new NonTeachingStaff();
+        nonTeachingStaff.CollegeName = "CUSAT";
         nonTeachingStaff.StaffId = 104;
         nonTeachingStaff.Name = "Anu";
         nonTeachingStaff.Department = "CS";
         nonTeachingStaff.Responsibilities = "maintaining records";
         nonTeachingStaff.Experience = 5;
+        nonTeachingStaff.DisplayCollege();
         nonTeachingStaff.DisplayStaffDetails();
         nonTeachingStaff.DisplayNonTeachingStaffDetails();
         break;

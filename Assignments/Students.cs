@@ -31,7 +31,7 @@ namespace Assignments
         {
             int highestMarks = Marks.Max();
             int lowestMarks = Marks.Min();
-            return $"Highest mark:{highestMarks} Lowest mark:{lowestMarks}\n";
+            return $"{name} has {Marks.Length} marks\nHighest mark:{highestMarks} Lowest mark:{lowestMarks}\n";
         }
     }
 }

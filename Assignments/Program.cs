@@ -36,14 +36,14 @@ foreach (var student in students)
     Console.WriteLine("Student Name:" +student.Name);
     double[] marks = new double[3];
     double total = 0;
-    Console.WriteLine("Marks:");
+    Console.Write("Marks:");
     for (int i = 0;i<marks.Length;i++)
     {
         marks[i] = student.Marks[i];
         total = total + marks[i];
-        Console.WriteLine(marks[i]);
+        Console.Write(marks[i] + " ");
     }
-    Console.WriteLine("Total:" +total);
+    Console.WriteLine("\nTotal:" +total);
     Console.WriteLine("Average:" + student.CalculateAverage());
     Console.WriteLine("Grade:" + student.Grade);
     Console.WriteLine(student.GetMarksSummary());

@@ -78,15 +78,43 @@ using Basic_Programs;
 //arraysExample.JaggedArray();
 
 
-//StudentMarks studentMarks = new StudentMarks(101,"Ashwin","Mysore");
-StudentGrade studentGrade= new StudentGrade();
-studentGrade.RollNo=100;
-studentGrade.StudentName = "Ashwin";
-studentGrade.City = "Mysore";
-studentGrade.Mark1 = 60;
-studentGrade.Mark2 = 80;
-studentGrade.Mark3 = 90;
-studentGrade.DisplayStudentDetails();
-Console.WriteLine("Total:" + studentGrade.CalculateTotal());
-Console.WriteLine("Average:" + studentGrade.CalculateAverage());
-Console.WriteLine("Grade:" + studentGrade.CalculateGrade());
+///StudentMarks studentMarks = new StudentMarks(101,"Ashwin","Mysore");
+//StudentGrade studentGrade= new StudentGrade();
+//studentGrade.RollNo=100;
+//studentGrade.StudentName = "Ashwin";
+//studentGrade.City = "Mysore";
+//studentGrade.Mark1 = 60;
+//studentGrade.Mark2 = 80;
+//studentGrade.Mark3 = 90;
+//studentGrade.DisplayStudentDetails();
+//Console.WriteLine("Total:" + studentGrade.CalculateTotal());
+//Console.WriteLine("Average:" + studentGrade.CalculateAverage());
+//Console.WriteLine("Grade:" + studentGrade.CalculateGrade());
+
+
+Console.Write("1.Teaching Staff\n2.Non-Teaching Staff\n");
+int x=Convert.ToInt32(Console.ReadLine());
+switch(x)
+{
+    case 1:
+        TeachingStaff teachingStaff = new TeachingStaff();
+        teachingStaff.StaffId = 100;
+        teachingStaff.Name = "Raj";
+        teachingStaff.Department = "CS";
+        teachingStaff.Specialization = "DBMS,DS";
+        teachingStaff.Semester = 6;
+        teachingStaff.DisplayStaffDetails();
+        teachingStaff.DisplayTeachingStaffDetails();
+        break;
+
+    case 2:
+        NonTeachingStaff nonTeachingStaff = new NonTeachingStaff();
+        nonTeachingStaff.StaffId = 104;
+        nonTeachingStaff.Name = "Anu";
+        nonTeachingStaff.Department = "CS";
+        nonTeachingStaff.Responsibilities = "maintaining records";
+        nonTeachingStaff.Experience = 5;
+        nonTeachingStaff.DisplayStaffDetails();
+        nonTeachingStaff.DisplayNonTeachingStaffDetails();
+        break;
+}

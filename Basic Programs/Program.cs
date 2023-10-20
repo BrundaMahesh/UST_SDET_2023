@@ -93,33 +93,48 @@ using Basic_Programs;
 
 
 
-Console.Write("1.Teaching Staff\n2.Non-Teaching Staff\n");
-int x=Convert.ToInt32(Console.ReadLine());
-switch(x)
-{
-    case 1:
-        TeachingStaff teachingStaff = new TeachingStaff();
-        teachingStaff.CollegeName = "NIE";
-        teachingStaff.StaffId = 100;
-        teachingStaff.Name = "Raj";
-        teachingStaff.Department = "CS";
-        teachingStaff.Specialization = "DBMS,DS";
-        teachingStaff.Semester = 6;
-        teachingStaff.DisplayCollege();
-        teachingStaff.DisplayStaffDetails();
-        teachingStaff.DisplayTeachingStaffDetails();
-        break;
+//Console.Write("1.Teaching Staff\n2.Non-Teaching Staff\n");
+//int x=Convert.ToInt32(Console.ReadLine());
+//switch(x)
+//{
+//    case 1:
+//        TeachingStaff teachingStaff = new TeachingStaff();
+//        teachingStaff.CollegeName = "NIE";
+//        teachingStaff.StaffId = 100;
+//        teachingStaff.Name = "Raj";
+//        teachingStaff.Department = "CS";
+//        teachingStaff.Specialization = "DBMS,DS";
+//        teachingStaff.Semester = 6;
+//        teachingStaff.DisplayCollege();
+//        teachingStaff.DisplayStaffDetails();
+//        teachingStaff.DisplayTeachingStaffDetails();
+//        break;
 
-    case 2:
-        NonTeachingStaff nonTeachingStaff = new NonTeachingStaff();
-        nonTeachingStaff.CollegeName = "CUSAT";
-        nonTeachingStaff.StaffId = 104;
-        nonTeachingStaff.Name = "Anu";
-        nonTeachingStaff.Department = "CS";
-        nonTeachingStaff.Responsibilities = "maintaining records";
-        nonTeachingStaff.Experience = 5;
-        nonTeachingStaff.DisplayCollege();
-        nonTeachingStaff.DisplayStaffDetails();
-        nonTeachingStaff.DisplayNonTeachingStaffDetails();
-        break;
-}
+//    case 2:
+//        NonTeachingStaff nonTeachingStaff = new NonTeachingStaff();
+//        nonTeachingStaff.CollegeName = "GSSS";
+//        nonTeachingStaff.StaffId = 104;
+//        nonTeachingStaff.Name = "Anu";
+//        nonTeachingStaff.Department = "CS";
+//        nonTeachingStaff.Responsibilities = "maintaining records";
+//        nonTeachingStaff.Experience = 5;
+//        nonTeachingStaff.DisplayCollege();
+//        nonTeachingStaff.DisplayStaffDetails();
+//        nonTeachingStaff.DisplayNonTeachingStaffDetails();
+//        break;
+//}
+
+
+
+ElectricVehicle electricVehicle = new ElectricVehicle();
+electricVehicle.VehicleNumber = 1;
+electricVehicle.Brand = "Tesla Inc";
+electricVehicle.Model = "X";
+Console.WriteLine($"Type=" + electricVehicle.setTypeOfVehicle()); 
+
+PetrolVehicle petrolVehicle = new PetrolVehicle();
+petrolVehicle.VehicleNumber = 2;
+petrolVehicle.Brand = "BMW Group";
+petrolVehicle.Model = "X5";
+Console.WriteLine($"Type=" + petrolVehicle.setTypeOfVehicle());
+

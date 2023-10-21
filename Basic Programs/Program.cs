@@ -125,16 +125,22 @@ using Basic_Programs;
 //}
 
 
+//ElectricVehicle electricVehicle = new ElectricVehicle();
+//electricVehicle.VehicleNumber = 1;
+//electricVehicle.Brand = "Tesla Inc";
+//electricVehicle.Model = "X";
+//Console.WriteLine($"Type=" + electricVehicle.setTypeOfVehicle()); 
 
-ElectricVehicle electricVehicle = new ElectricVehicle();
-electricVehicle.VehicleNumber = 1;
-electricVehicle.Brand = "Tesla Inc";
-electricVehicle.Model = "X";
-Console.WriteLine($"Type=" + electricVehicle.setTypeOfVehicle()); 
+//PetrolVehicle petrolVehicle = new PetrolVehicle();
+//petrolVehicle.VehicleNumber = 2;
+//petrolVehicle.Brand = "BMW Group";
+//petrolVehicle.Model = "X5";
+//Console.WriteLine($"Type=" + petrolVehicle.setTypeOfVehicle());
 
-PetrolVehicle petrolVehicle = new PetrolVehicle();
-petrolVehicle.VehicleNumber = 2;
-petrolVehicle.Brand = "BMW Group";
-petrolVehicle.Model = "X5";
-Console.WriteLine($"Type=" + petrolVehicle.setTypeOfVehicle());
+
+Doctor doctor = new Doctor();
+doctor.AddNewDoctor();
+doctor.DisplayDoctorDetails();
+doctor.ModifyDoctor();
+doctor.DisplayDoctorDetails();
 

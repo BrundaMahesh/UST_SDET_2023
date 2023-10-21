@@ -1,11 +1,11 @@
 ﻿using Assignments;
-                 
+//18/10/2023           
 //Student student = new Student("RajKumar", 50, 80, 40);
 //Console.WriteLine($"Total=" +student.Total());
 //Console.WriteLine($"Average=" +student.CalculateAverage());
 //Console.WriteLine($"Grade=" + student.Grade());
 
-
+//19/10/2023
 //Product[] products = new Product[3];
 //products[0] = new Product("Bread", 50, 2);
 //products[1] = new Product("Milk",30,1);
@@ -49,25 +49,32 @@
 //    Console.WriteLine(student.GetMarksSummary());
 //}
 
-
-ElectronicsProduct electronicsProduct= new ElectronicsProduct("TV",10000,2,1);
+//20/10/2023
+//Single
+ElectronicsProduct electronicsProduct = new ElectronicsProduct("TV",10000,2,1);
 //Console.WriteLine($"Product Name:" +electronicsProduct.ProductName 
 //    + "\n" +"Price:" +electronicsProduct.Price +"\n" +"Quantity:"+electronicsProduct.Quantity);
 electronicsProduct.DisplayElectronicsProduct();
 Console.WriteLine(electronicsProduct.ProductValue()); 
 
-
+//Multi-level
 DigitalProduct digitalProduct = new DigitalProduct("Mobile", 50000, 5, 6, "Mp3");
 //Console.WriteLine($"Product Name:" + digitalProduct.ProductName
 //    + "\n" + "Price:" + digitalProduct.Price + "\n" + "Quantity:" + digitalProduct.Quantity);
 digitalProduct.DisplayDigitalProduct();
-Console.WriteLine(digitalProduct.ProductValue()); 
+digitalProduct.DisplayElectronicsProduct();
+Console.WriteLine(digitalProduct.ProductValue());
 
 
+//heirarchial
+ElectronicsProduct electronicsProduct1 = new ElectronicsProduct("TV", 10000, 2, 1);
 ClothingProduct clothingProduct = new ClothingProduct("T-shirt", 2500, 5, "Large");
+DigitalProduct digitalProduct1 = new DigitalProduct("Mobile", 50000, 5, 6, "Mp3");
 //Console.WriteLine($"\nProduct Name:" + clothingProduct.ProductName
 //    + "\n" + "Price:" + clothingProduct.Price + "\n" + "Quantity:" + clothingProduct.Quantity);
 clothingProduct.DisplayClothingProduct();
+Console.WriteLine(electronicsProduct1.ProductValue());
+Console.WriteLine(digitalProduct1.ProductValue());
 Console.WriteLine(clothingProduct.ProductValue());
 
 

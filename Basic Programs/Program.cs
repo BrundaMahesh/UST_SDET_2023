@@ -143,4 +143,6 @@ doctor.AddNewDoctor();
 doctor.DisplayDoctorDetails();
 doctor.ModifyDoctor();
 doctor.DisplayDoctorDetails();
+doctor.BookApp(2345, "Arun");
+doctor.DelApp("Arun");
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Basic_Programs
 {
-    internal class Doctor : IDoctor
+    internal class Doctor : IDoctor,IAppointment
     {
         public int DoctorId { get; set; }   
         public string? DoctorName { get; set; }
@@ -23,6 +23,16 @@ namespace Basic_Programs
         public void DisplayDoctorDetails()
         {
             Console.WriteLine($"Doctor Id:"+DoctorId +"\n" +"Doctor Name:"+DoctorName +"\n");
+        }
+
+        public void BookApp(int did, string pname)
+        {
+            Console.WriteLine($"Booked appointment for {DoctorName} with Doctor Id {DoctorId}");
+        }
+
+        public void DelApp(string pname)
+        {
+            Console.WriteLine($"Cancelled appointment for {pname}");
         }
     }
 }

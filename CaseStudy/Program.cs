@@ -5,6 +5,7 @@ using System.Threading.Channels;
 Book[] books = new Book[1];
 //Customer[] customers = new Customer[1];
 int option = 1;
+double total;
 do
 {
 
@@ -56,7 +57,29 @@ do
             break;
 
         case 3:
+            Console.Write("enter the book author to purchase:");
+            string author1=Console.ReadLine();
+            foreach (var item in books)
+            {
+                if(item.Author==author1)
+                {
+                    Console.Write("enter order date:");
+                    int orderDate=Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Order placed!!");
+                    total = item.Price;
+                    Order order= new Order(orderDate, total);
+                    Console.WriteLine("\nOrder details:");
+                    order.OrderPlaced();
+                    Console.WriteLine("Book title:" + item.Title);
+                    Console.WriteLine("Book price:"+item.Price);
 
+                }
+                else
+                {
+                    Console.WriteLine("No book with is author to order!! ");
+                }
+                
+            }
             break;
 
 
@@ -73,7 +96,7 @@ do
                 }
                 else
                 {
-                    Console.WriteLine("No book available!!");
+                    Console.WriteLine($"Book with this title {item.Title} is not available!!");
                 }
             }
             break;

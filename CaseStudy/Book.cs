@@ -13,5 +13,11 @@ namespace CaseStudy
         public double? ISBN { get; set; }
         public double Price { get; set; }
         public string? Availability {  get; set; }
+
+        public void Display()
+        {
+            Console.WriteLine($"Title:"+Title +"\n" +"Author:"+Author +"\n"+
+                "ISBN:"+ISBN +"\n" +"Price:"+Price +"\n" +"Availability:"+Availability);
+        }
     }
 }

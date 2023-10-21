@@ -8,5 +8,6 @@ namespace CaseStudy
 {
     internal class NonFiction:Book
     {
+        public string? Type { get; set; }
     }
 }

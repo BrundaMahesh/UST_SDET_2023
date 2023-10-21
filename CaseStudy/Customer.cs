@@ -21,7 +21,7 @@ namespace CaseStudy
 
         public void CustDisplay()
         {
-            Console.WriteLine($"Name:"+Name +"\n" +"Contact detail:"+ContactDetails +"\n" +"Customer id:"+CustomerId);
+            Console.WriteLine($"\nName:"+Name +"\n" +"Contact detail:"+ContactDetails +"\n" +"Customer id:"+CustomerId);
         }
     }
 }

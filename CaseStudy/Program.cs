@@ -1,5 +1,6 @@
 ﻿using CaseStudy;
 using System.Reflection;
+using System.Threading.Channels;
 
 Book[] books = new Book[1];
 //Customer[] customers = new Customer[1];
@@ -10,8 +11,8 @@ do
     Console.WriteLine("Online Book Store");
     Console.WriteLine("1.Add Book");
     Console.WriteLine("2.Add Customer Details");
-    Console.WriteLine("3.Search Book");
-    Console.WriteLine("4.ViewAll Book");
+    Console.WriteLine("3.Place order");
+    Console.WriteLine("4.Search Book");
     Console.WriteLine("5.Exit");
     Console.Write("enter your choice:");
     int choice = Convert.ToInt32(Console.ReadLine());
@@ -36,6 +37,10 @@ do
                 string type = Console.ReadLine();
                 books[i] = new Book(title, author, isbn, price, availability, type);
                 Console.WriteLine("Book added successfully!!");
+                foreach (var book in books)
+                {
+                    book.Display(book);
+                }
             }
             break;
 
@@ -51,21 +56,26 @@ do
             break;
 
         case 3:
+
             break;
 
 
         case 4:
-            //if(books.Count()==0)
-            //{
-            //    Console.WriteLine("No books to display");
-            //}
-            //else
-            //{
-            foreach (var book in books)
+            Console.Write("enter the book title to search:");
+            string title1=Console.ReadLine();
+            foreach (var item in books)
             {
-                book.Display(book);
+                if(item.Title.Equals(title1))
+                {
+                    Console.WriteLine($"Book title:"+item.Title);
+                    Console.WriteLine($"Book price:"+item.Price);
+                    Console.WriteLine($"Book availability:"+item.Availability);
+                }
+                else
+                {
+                    Console.WriteLine("No book available!!");
+                }
             }
-            //}
             break;
 
         case 5:
@@ -77,7 +87,8 @@ do
     }
     Console.WriteLine("Do you want to continue?\n 1.Yes\n 2.No");
     option = Convert.ToInt32(Console.ReadLine());
-} while (option != 2);
+}
+while (option != 2);
 
 
 

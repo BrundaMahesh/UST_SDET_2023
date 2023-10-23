@@ -36,9 +36,14 @@ namespace Basic_Programs
         public string? Name { get; set; }
         public string? Status { get; set; }
 
-        public void WelcomeMessage()
+        public static void WelcomeMessage()
         {
             Console.WriteLine("Welcome!!");
+        }
+
+        public static void ExitMessage()
+        {
+            Console.WriteLine("Done!!");
         }
         public void GetAccountDetails(int  customerId)
         {

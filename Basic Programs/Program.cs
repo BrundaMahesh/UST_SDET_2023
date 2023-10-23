@@ -172,3 +172,4 @@ switch(choice)
         break;
 
 }
+BankDetailsNew.ExitMessage();

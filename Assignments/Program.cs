@@ -80,28 +80,28 @@
 
 //23/10/2023
 //Console.Write("enter first name:");
-//string firstName=Console.ReadLine();
+//string firstName = Console.ReadLine();
 //Console.Write("enter last name:");
 //string lastName = Console.ReadLine();
 //Console.Write("enter age:");
-//int age=Convert.ToInt32(Console.ReadLine());
+//int age = Convert.ToInt32(Console.ReadLine());
 //Console.Write("enter employee id:");
-//int id=Convert.ToInt32(Console.ReadLine());
-//Employee employee = new Employee(firstName,lastName,age,id);
+//int id = Convert.ToInt32(Console.ReadLine());
+//Employee employee = new Employee(firstName, lastName, age, id);
 //employee.DisplayInfo(age);
 
 Console.Write("enter radius:");
-double radius=Convert.ToDouble(Console.ReadLine());
+double radius = Convert.ToDouble(Console.ReadLine());
 Circle circle = new Circle(radius);
 circle.Draw();
 circle.CalculateArea();
 circle.CalculatePerimeter();
 
 Console.Write("enter length:");
-double length=Convert.ToDouble(Console.ReadLine());
+double length = Convert.ToDouble(Console.ReadLine());
 Console.Write("enter width:");
 double width = Convert.ToDouble(Console.ReadLine());
-Rectangle rectangle = new Rectangle(length,width);
+Rectangle rectangle = new Rectangle(length, width);
 rectangle.Draw();
 rectangle.CalculateArea();
 rectangle.CalculatePerimeter();

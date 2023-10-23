@@ -17,7 +17,7 @@ namespace Assignments
 
         public void DisplayInfo(int age)
         {
-            if (age >= 18 && age <= 100)
+            //if (age >= 18 && age <= 100)
                 Console.WriteLine($"Full name:"+FirstName + LastName +"\n" +"Age:"+Age+"\n"+"Employee Id:"+EmployeeId +"\n");
         }
     }

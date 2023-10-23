@@ -18,8 +18,8 @@ namespace Basic_Programs
 
         public int CustomerId {  get; set; }
         public long AccountNumber {  get; set; }
-        public string Name { get; set; }
-        public string Status { get; set; }
+        public string? Name { get; set; }
+        public string? Status { get; set; }
 
         public void GetAccountDetails(int  customerId)
         {

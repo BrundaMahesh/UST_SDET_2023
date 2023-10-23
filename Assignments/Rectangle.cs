@@ -6,24 +6,33 @@ using System.Threading.Tasks;
 
 namespace Assignments
 {
-    internal class Rectangle:Shape,IDrawable
+    internal class Rectangle : Shape, IDrawable
     {
-        public double Length {  get; set; }
-        public double Width {  get; set; }
+        public Rectangle(double length, double width)
+        {
+            Length = length;
+            Width = width;
+        }
+
+        public double Length { get; set; }
+        public double Width { get; set; }
 
         public override void CalculateArea()
         {
-            throw new NotImplementedException();
+            var area = Length * Width;
+            Console.WriteLine("Area of Rectangle:" + area);
         }
 
         public override void CalculatePerimeter()
         {
-            throw new NotImplementedException();
+            var perimeter = 2 * (Length + Width);
+            Console.WriteLine("Perimeter of Rectangle:" + perimeter);
         }
+
 
         public void Draw()
         {
-            Console.WriteLine("Rectangle");
+            Console.WriteLine("\nRectangle:");
         }
     }
 }

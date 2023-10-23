@@ -10,6 +10,12 @@ namespace Assignments
     {
         public double Radius {  get; set; }
         public readonly double pi = 3.14;
+
+        public Circle(double radius)
+        {
+            Radius = radius;
+        }
+
         public override void CalculateArea()
         {
             var area = pi * Radius * Radius;
@@ -19,12 +25,12 @@ namespace Assignments
         public override void CalculatePerimeter()
         {
             var perimeter = 2 * pi * Radius;
-            Console.WriteLine("Perimeter of Circle:" + perimeter);
+            Console.WriteLine("Perimeter of Circle:" + perimeter+"\n");
         }
 
         public void Draw()
         {
-            Console.WriteLine("Circle");
+            Console.WriteLine("\nCircle:");
         }
     }
 }

@@ -138,11 +138,33 @@ using Basic_Programs;
 //Console.WriteLine($"Type=" + petrolVehicle.setTypeOfVehicle());
 
 
-Doctor doctor = new Doctor();
-doctor.AddNewDoctor();
-doctor.DisplayDoctorDetails();
-doctor.ModifyDoctor();
-doctor.DisplayDoctorDetails();
-doctor.BookApp(2345, "Arun");
-doctor.DelApp("Arun");
+//Doctor doctor = new Doctor();
+//doctor.AddNewDoctor();
+//doctor.DisplayDoctorDetails();
+//doctor.ModifyDoctor();
+//doctor.DisplayDoctorDetails();
+//doctor.BookApp(2345, "Arun");
+//doctor.DelApp("Arun");
 
+BankDetails bankDetails=new BankDetails(1002,7648389294L,"Ajay","Inactive");
+Console.Write("1.Customer Id\n2.Account Number\n3.Name\n");
+int choice=Convert.ToInt32(Console.ReadLine());
+switch(choice)
+{
+    case 1:
+        Console.WriteLine("Enter customer Id:");
+        bankDetails.GetAccountDetails(Convert.ToInt32(Console.ReadLine()));
+        break;
+    case 2:
+        Console.WriteLine("Enter Account Number:");
+        bankDetails.GetAccountDetails(Convert.ToInt64(Console.ReadLine()));
+        break;
+    case 3:
+        Console.WriteLine("Enter Name:");
+        bankDetails.GetAccountDetails(Console.ReadLine());
+        break;
+    default:
+        Console.WriteLine("Invalid choice!!");
+        break;
+
+}

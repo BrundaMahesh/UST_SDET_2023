@@ -148,22 +148,24 @@ using Basic_Programs;
 
 //BankDetails bankDetails=new BankDetails(1002,7648389294L,"Ajay","Inactive");
 //BankDetails bankDetails = new BankDetails(1234, 56786367L, "Arun");
-BankDetails bankDetails = new BankDetails();    
+//BankDetails bankDetails = new BankDetails();
+BankDetailsNew bankDetailsNew=new BankDetailsNew(1002, 7648389294L, "Ajay", "Inactive");
+bankDetailsNew.WelcomeMessage();
 Console.Write("1.Customer Id\n2.Account Number\n3.Name\n");
 int choice=Convert.ToInt32(Console.ReadLine());
 switch(choice)
 {
     case 1:
         Console.WriteLine("Enter customer Id:");
-        bankDetails.GetAccountDetails(Convert.ToInt32(Console.ReadLine()));
+        bankDetailsNew.GetAccountDetails(Convert.ToInt32(Console.ReadLine()));
         break;
     case 2:
         Console.WriteLine("Enter Account Number:");
-        bankDetails.GetAccountDetails(Convert.ToInt64(Console.ReadLine()));
+        bankDetailsNew.GetAccountDetails(Convert.ToInt64(Console.ReadLine()));
         break;
     case 3:
         Console.WriteLine("Enter Name:");
-        bankDetails.GetAccountDetails(Console.ReadLine());
+        bankDetailsNew.GetAccountDetails(Console.ReadLine());
         break;
     default:
         Console.WriteLine("Invalid choice!!");

@@ -9,13 +9,13 @@ namespace Basic_Programs
 {
     internal class BankDetails
     {
-        public BankDetails(int customerId, long accountNumber, string? name)
-        {
-            CustomerId = customerId;
-            AccountNumber = accountNumber;
-            Name = name;
-            Status = "Inactive";
-        }
+        //public BankDetails(int customerId, long accountNumber, string? name)
+        //{
+        //    CustomerId = customerId;
+        //    AccountNumber = accountNumber;
+        //    Name = name;
+        //    Status = "Inactive";
+        //}
 
         public BankDetails(int customerId, long accountNumber, string name, string status)
         {
@@ -24,18 +24,22 @@ namespace Basic_Programs
             Name = name;
             Status = status;
         }
-        public BankDetails()//Default constructor
-        {
-            CustomerId = 0;
-            AccountNumber = 0;
-            Name = "";
-            Status = "";
-        }
+        //public BankDetails()//Default constructor
+        //{
+        //    CustomerId = 0;
+        //    AccountNumber = 0;
+        //    Name = "";
+        //    Status = "";
+        //}
         public int CustomerId {  get; set; }
         public long AccountNumber {  get; set; }
         public string? Name { get; set; }
         public string? Status { get; set; }
 
+        public void WelcomeMessage()
+        {
+            Console.WriteLine("Welcome!!");
+        }
         public void GetAccountDetails(int  customerId)
         {
             if(customerId==customerId)

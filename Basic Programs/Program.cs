@@ -146,7 +146,9 @@ using Basic_Programs;
 //doctor.BookApp(2345, "Arun");
 //doctor.DelApp("Arun");
 
-BankDetails bankDetails=new BankDetails(1002,7648389294L,"Ajay","Inactive");
+//BankDetails bankDetails=new BankDetails(1002,7648389294L,"Ajay","Inactive");
+//BankDetails bankDetails = new BankDetails(1234, 56786367L, "Arun");
+BankDetails bankDetails = new BankDetails();    
 Console.Write("1.Customer Id\n2.Account Number\n3.Name\n");
 int choice=Convert.ToInt32(Console.ReadLine());
 switch(choice)

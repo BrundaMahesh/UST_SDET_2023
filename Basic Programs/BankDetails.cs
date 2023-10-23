@@ -3,11 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Basic_Programs
 {
     internal class BankDetails
     {
+        public BankDetails(int customerId, long accountNumber, string? name)
+        {
+            CustomerId = customerId;
+            AccountNumber = accountNumber;
+            Name = name;
+            Status = "Inactive";
+        }
+
         public BankDetails(int customerId, long accountNumber, string name, string status)
         {
             CustomerId = customerId;
@@ -15,7 +24,13 @@ namespace Basic_Programs
             Name = name;
             Status = status;
         }
-
+        public BankDetails()//Default constructor
+        {
+            CustomerId = 0;
+            AccountNumber = 0;
+            Name = "";
+            Status = "";
+        }
         public int CustomerId {  get; set; }
         public long AccountNumber {  get; set; }
         public string? Name { get; set; }

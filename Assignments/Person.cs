@@ -26,7 +26,7 @@ namespace Assignments
             get =>age; 
             set
             {
-                if (age >= 18 && age <= 100)
+                if (value >= 18 && value <= 100)
                     age = value;
                 else
                     Console.WriteLine("Age must be between 18 and 100");

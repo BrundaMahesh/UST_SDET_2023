@@ -51,30 +51,43 @@
 
 //20/10/2023
 //Single
-ElectronicsProduct electronicsProduct = new ElectronicsProduct("TV",10000,2,1);
-//Console.WriteLine($"Product Name:" +electronicsProduct.ProductName 
-//    + "\n" +"Price:" +electronicsProduct.Price +"\n" +"Quantity:"+electronicsProduct.Quantity);
-electronicsProduct.DisplayElectronicsProduct();
-Console.WriteLine(electronicsProduct.ProductValue()); 
+//ElectronicsProduct electronicsProduct = new ElectronicsProduct("TV",10000,2,1);
+////Console.WriteLine($"Product Name:" +electronicsProduct.ProductName 
+////    + "\n" +"Price:" +electronicsProduct.Price +"\n" +"Quantity:"+electronicsProduct.Quantity);
+//electronicsProduct.DisplayElectronicsProduct();
+//Console.WriteLine(electronicsProduct.ProductValue()); 
 
-//Multi-level
-DigitalProduct digitalProduct = new DigitalProduct("Mobile", 50000, 5, 6, "Mp3");
-//Console.WriteLine($"Product Name:" + digitalProduct.ProductName
-//    + "\n" + "Price:" + digitalProduct.Price + "\n" + "Quantity:" + digitalProduct.Quantity);
-digitalProduct.DisplayDigitalProduct();
-digitalProduct.DisplayElectronicsProduct();
-Console.WriteLine(digitalProduct.ProductValue());
+////Multi-level
+//DigitalProduct digitalProduct = new DigitalProduct("Mobile", 50000, 5, 6, "Mp3");
+////Console.WriteLine($"Product Name:" + digitalProduct.ProductName
+////    + "\n" + "Price:" + digitalProduct.Price + "\n" + "Quantity:" + digitalProduct.Quantity);
+//digitalProduct.DisplayDigitalProduct();
+//digitalProduct.DisplayElectronicsProduct();
+//Console.WriteLine(digitalProduct.ProductValue());
 
 
-//heirarchial
-ElectronicsProduct electronicsProduct1 = new ElectronicsProduct("TV", 10000, 2, 1);
-ClothingProduct clothingProduct = new ClothingProduct("T-shirt", 2500, 5, "Large");
-DigitalProduct digitalProduct1 = new DigitalProduct("Mobile", 50000, 5, 6, "Mp3");
-//Console.WriteLine($"\nProduct Name:" + clothingProduct.ProductName
-//    + "\n" + "Price:" + clothingProduct.Price + "\n" + "Quantity:" + clothingProduct.Quantity);
-clothingProduct.DisplayClothingProduct();
-Console.WriteLine(electronicsProduct1.ProductValue());
-Console.WriteLine(digitalProduct1.ProductValue());
-Console.WriteLine(clothingProduct.ProductValue());
+////heirarchial
+//ElectronicsProduct electronicsProduct1 = new ElectronicsProduct("TV", 10000, 2, 1);
+//ClothingProduct clothingProduct = new ClothingProduct("T-shirt", 2500, 5, "Large");
+//DigitalProduct digitalProduct1 = new DigitalProduct("Mobile", 50000, 5, 6, "Mp3");
+////Console.WriteLine($"\nProduct Name:" + clothingProduct.ProductName
+////    + "\n" + "Price:" + clothingProduct.Price + "\n" + "Quantity:" + clothingProduct.Quantity);
+//clothingProduct.DisplayClothingProduct();
+//Console.WriteLine(electronicsProduct1.ProductValue());
+//Console.WriteLine(digitalProduct1.ProductValue());
+//Console.WriteLine(clothingProduct.ProductValue());
+
+
+//23/10/2023
+Console.Write("enter first name:");
+string firstName=Console.ReadLine();
+Console.Write("enter last name:");
+string lastName = Console.ReadLine();
+Console.Write("enter age:");
+int age=Convert.ToInt32(Console.ReadLine());
+Console.Write("enter employee id:");
+int id=Convert.ToInt32(Console.ReadLine());
+Employee employee = new Employee(firstName,lastName,age,id);
+employee.DisplayInfo(age);
 
 

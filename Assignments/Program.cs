@@ -108,9 +108,14 @@
 
 
 //25/10/2023
-InsurancePolicy insurancePolicy = new InsurancePolicy("Bhima", 723748555, 10000);
-insurancePolicy.RenewPolicy(20000);
-insurancePolicy.RenewPolicy();
+//InsurancePolicy insurancePolicy = new InsurancePolicy("Bhima", 723748555, 10000);
+//insurancePolicy.RenewPolicy(20000);
+//insurancePolicy.RenewPolicy();
+
+LifeInsurance lifeInsurance = new LifeInsurance("Gold", 84746563, 500000, 18);
+//Console.WriteLine(lifeInsurance.CalculatePremium());
+CarInsurance carInsurance = new CarInsurance("Bheema", 764846884, 300000, "Petrol");
+Console.WriteLine(carInsurance.CalculatePremium());
 
 
 

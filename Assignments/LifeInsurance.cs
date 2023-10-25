@@ -17,7 +17,19 @@ namespace Assignments
 
         public override double CalculatePremium()
         {
-            throw new NotImplementedException();
+            if(Age <=10) 
+            {
+                return PremiumAmount*1.1;
+            }
+            else if(Age<=18)
+            {
+                return PremiumAmount * 1.5;
+            }
+            else 
+            {
+                return PremiumAmount * 2;
+            }
+            
         }
     }
 }

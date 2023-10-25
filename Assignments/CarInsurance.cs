@@ -17,7 +17,11 @@ namespace Assignments
 
         public override double CalculatePremium()
         {
-            throw new NotImplementedException();
+            
+            if (TypeOfVehicle == "Petrol" )
+                return PremiumAmount * 3;
+            else
+                return PremiumAmount * 5;
         }
     }
 }

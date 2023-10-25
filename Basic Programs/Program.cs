@@ -187,4 +187,4 @@ GenericCollection genericCollection = new GenericCollection();
 //genericCollection.StackHandling();
 //genericCollection.QueueHandling();
 //genericCollection.SortedListHandling();
-genericCollection.DictionaryHandling();
+//genericCollection.DictionaryHandling();

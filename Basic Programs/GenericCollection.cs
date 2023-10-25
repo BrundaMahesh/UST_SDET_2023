@@ -125,7 +125,7 @@ namespace Basic_Programs
 
             }
             dictionary.Remove("Place");
-            foreach (var item in dictionary.Keys)
+            foreach (string item in dictionary.Keys)
             {
                 Console.WriteLine(item);
 

@@ -18,7 +18,7 @@ namespace Assignments
         public override double CalculatePremium()
         {
             
-            if (TypeOfVehicle == "Petrol" )
+            if (TypeOfVehicle == "Petrol")
                 return PremiumAmount * 3;
             else
                 return PremiumAmount * 5;

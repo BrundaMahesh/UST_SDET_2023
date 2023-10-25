@@ -175,9 +175,16 @@ using Basic_Programs;
 //BankDetailsNew.ExitMessage();
 
 
-NonGenericCollection nonGenericCollection = new NonGenericCollection();
+//NonGenericCollection nonGenericCollection = new NonGenericCollection();
 //nonGenericCollection.ArrayListHandling();
 //nonGenericCollection.StackHandling();
 //nonGenericCollection.QueueHandling();
 //nonGenericCollection.HashTableHandling();
-nonGenericCollection.SortedListHandling();
+//nonGenericCollection.SortedListHandling();
+
+GenericCollection genericCollection = new GenericCollection();
+//genericCollection.ListHandling();
+//genericCollection.StackHandling();
+//genericCollection.QueueHandling();
+//genericCollection.SortedListHandling();
+genericCollection.DictionaryHandling();

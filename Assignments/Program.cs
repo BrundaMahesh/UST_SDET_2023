@@ -90,21 +90,27 @@
 //Employee employee = new Employee(firstName, lastName, age, id);
 //employee.DisplayInfo(age);
 
-Console.Write("enter radius:");
-double radius = Convert.ToDouble(Console.ReadLine());
-Circle circle = new Circle(radius);
-circle.Draw();
-circle.CalculateArea();
-circle.CalculatePerimeter();
+//Console.Write("enter radius:");
+//double radius = Convert.ToDouble(Console.ReadLine());
+//Circle circle = new Circle(radius);
+//circle.Draw();
+//circle.CalculateArea();
+//circle.CalculatePerimeter();
 
-Console.Write("enter length:");
-double length = Convert.ToDouble(Console.ReadLine());
-Console.Write("enter width:");
-double width = Convert.ToDouble(Console.ReadLine());
-Rectangle rectangle = new Rectangle(length, width);
-rectangle.Draw();
-rectangle.CalculateArea();
-rectangle.CalculatePerimeter();
+//Console.Write("enter length:");
+//double length = Convert.ToDouble(Console.ReadLine());
+//Console.Write("enter width:");
+//double width = Convert.ToDouble(Console.ReadLine());
+//Rectangle rectangle = new Rectangle(length, width);
+//rectangle.Draw();
+//rectangle.CalculateArea();
+//rectangle.CalculatePerimeter();
+
+
+//25/10/2023
+InsurancePolicy insurancePolicy = new InsurancePolicy("Bhima", 723748555, 10000);
+insurancePolicy.RenewPolicy(20000);
+insurancePolicy.RenewPolicy();
 
 
 

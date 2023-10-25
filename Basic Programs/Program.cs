@@ -176,4 +176,6 @@ using Basic_Programs;
 
 
 NonGenericCollection nonGenericCollection = new NonGenericCollection();
-nonGenericCollection.ArrayListHandling();
+//nonGenericCollection.ArrayListHandling();
+//nonGenericCollection.StackHandling();
+nonGenericCollection.QueueHandling();

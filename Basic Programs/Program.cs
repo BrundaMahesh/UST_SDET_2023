@@ -178,4 +178,6 @@ using Basic_Programs;
 NonGenericCollection nonGenericCollection = new NonGenericCollection();
 //nonGenericCollection.ArrayListHandling();
 //nonGenericCollection.StackHandling();
-nonGenericCollection.QueueHandling();
+//nonGenericCollection.QueueHandling();
+//nonGenericCollection.HashTableHandling();
+nonGenericCollection.SortedListHandling();

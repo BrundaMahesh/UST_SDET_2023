@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -92,6 +93,44 @@ namespace Basic_Programs
             {
                 Console.WriteLine(item);
 
+            }
+        }
+
+        public void HashTableHandling()
+        {
+            Hashtable hashTable = new Hashtable();
+            hashTable.Add("Name", "John");
+            hashTable.Add("RollNumber", 12);
+            hashTable.Add("Place", "Kochi");
+            foreach (var item in hashTable.Keys)
+            {
+                Console.WriteLine(item);
+
+            }
+            foreach (var item in hashTable.Values)
+            {
+                Console.WriteLine(item);
+
+            }
+            hashTable.Remove("Place");
+            foreach (var item in hashTable)
+            {
+                Console.WriteLine(item);
+
+            }
+        }
+
+        public void SortedListHandling()
+        {
+            //keys will be in sorted order
+            SortedList sortedList = new SortedList();
+            sortedList.Add(3, 30);
+            sortedList.Add(4, "BBB");
+            sortedList.Add(1,10);
+            sortedList.Add(2,20);
+            foreach (var item in sortedList)
+            {
+                Console.WriteLine(item);
             }
 
         }

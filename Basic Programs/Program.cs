@@ -182,9 +182,13 @@ using Basic_Programs;
 //nonGenericCollection.HashTableHandling();
 //nonGenericCollection.SortedListHandling();
 
-GenericCollection genericCollection = new GenericCollection();
+//GenericCollection genericCollection = new GenericCollection();
 //genericCollection.ListHandling();
 //genericCollection.StackHandling();
 //genericCollection.QueueHandling();
 //genericCollection.SortedListHandling();
 //genericCollection.DictionaryHandling();
+
+
+ExceptionHandling exceptionHandling= new ExceptionHandling(10,0);
+exceptionHandling.Divide();

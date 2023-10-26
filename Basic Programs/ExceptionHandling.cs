@@ -26,9 +26,14 @@ namespace Basic_Programs
                 //int result = FirstNumber / SecondNumber;
                 //Console.WriteLine("Result:"+result);
 
-                foreach (var item in num)
+                //foreach (var item in num)
+                //{
+                //    int result = item / SecondNumber;
+                //    Console.WriteLine(result);
+                //}
+                for(int i = 0;i<=3;i++)
                 {
-                    int result = item / SecondNumber;
+                    int result = num[i] / SecondNumber;
                     Console.WriteLine(result);
                 }
             }
@@ -38,6 +43,10 @@ namespace Basic_Programs
                 Console.WriteLine(ex.StackTrace);
                 //Console.WriteLine(ex.Source);
                 Console.WriteLine("Denominator cannot be zero");
+            }
+            catch(IndexOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.StackTrace);
             }
             
         }

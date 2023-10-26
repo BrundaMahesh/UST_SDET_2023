@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Assignments.ExceptionMessages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Assignments.ExceptionMessages.MyException;
 
 namespace Assignments
 {
@@ -19,15 +21,15 @@ namespace Assignments
         {
             if(Age<0 || Age>=120)
             {
-                throw new CustomException("");
+                throw new CustomException(ErrorMessages["Error1"]);
             }
             if(string.IsNullOrEmpty(Name))
             {
-                throw new CustomException("");
+                throw new CustomException(ErrorMessages["Error2"]);
             }
             if(string.IsNullOrEmpty(Diagnosis))
             {
-                throw new CustomException("");
+                throw new CustomException(ErrorMessages["Error3"]);
             }
         }
         

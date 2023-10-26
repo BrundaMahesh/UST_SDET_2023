@@ -1,5 +1,6 @@
 ﻿using Assignments;
 using System.Reflection;
+using static Assignments.ExceptionMessages.MyException;
 //18/10/2023           
 //Student student = new Student("RajKumar", 50, 80, 40);
 //Console.WriteLine($"Total=" +student.Total());
@@ -132,13 +133,17 @@ using System.Reflection;
 //callRecord.CallHistory(phoneNumber);
 //callRecord.TotalNoOfCalls();
 
+Patient patient = new Patient();
 try
 {
-    
+    //patient.AddPatient(1, "Harini", 150, "Sugar");
+    //patient.AddPatient(2, "", 34, "BP");
+    //patient.AddPatient(3, "John", 67, "");
+    patient.AddPatient(4, "Tom", 78, "Thyroid");
 }
-catch()
+catch(CustomException ex)
 {
-
+    Console.WriteLine(ex.Message);
 }
 
 

@@ -191,15 +191,20 @@ using Basic_Programs.ExceptionMessages;
 //genericCollection.DictionaryHandling();
 
 
-ExceptionHandling exceptionHandling= new ExceptionHandling(100,10);
+ExceptionHandling exceptionHandling= new ExceptionHandling(10,10);
 try
 {
     exceptionHandling.NumberCheck();
 }
-catch(ArgumentException)
+//catch(ArgumentException)
+//{
+//    Console.WriteLine(MyExceptions.exceptionList[3]);
+//}
+catch(ArgumentException ex)
 {
-    Console.WriteLine(MyExceptions.exceptionList[3]);
+    Console.WriteLine(ex.Message);
 }
+
 //try
 //{
 //    exceptionHandling.Divide();

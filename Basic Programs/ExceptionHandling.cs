@@ -44,7 +44,7 @@ namespace Basic_Programs
             }
             else
             {
-                throw new ArgumentException();
+                throw new ArgumentException("First number is not greater than or equal to 100");
             }
         }
     }

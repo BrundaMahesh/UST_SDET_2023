@@ -129,6 +129,7 @@ CallRecord callRecord = new CallRecord();
 Console.WriteLine("enter phone number");
 long phoneNumber = Convert.ToInt64(Console.ReadLine());
 callRecord.CallHistory(phoneNumber);
+callRecord.TotalNoOfCalls();
 
 
 

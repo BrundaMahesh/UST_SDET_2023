@@ -35,14 +35,27 @@ namespace Assignments
             }
         }
 
-        //public void TotalNoOfCalls()
-        //{
-        //    foreach (var record in CallRecords)
-        //    {
-                
-                
-        //    }
-        //}
+        public void TotalNoOfCalls()
+        {
+
+            Dictionary<long,long> calls = new Dictionary<long,long>();
+            foreach(var record in CallRecords)
+            {
+                if(calls.ContainsKey(record.PhoneNumber))
+                {
+                    calls[record.PhoneNumber]++;
+                }
+                else
+                {
+                    calls[record.PhoneNumber] = 1;
+                }
+            }
+            Console.WriteLine("\nTotal number of calls per phone number");
+            foreach (var item in calls)
+            {
+                Console.WriteLine($"{item.Key}:{item.Value}");
+            }
+        }
 
     }
 }

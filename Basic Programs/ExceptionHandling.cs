@@ -35,8 +35,17 @@ namespace Basic_Programs
                     int result = num[i] / SecondNumber;
                     Console.WriteLine(result);
                 }
-            
-            
+        }
+        public void NumberCheck()
+        {
+            if(FirstNumber>=100)
+            {
+                Console.WriteLine("Congratzz!!");
+            }
+            else
+            {
+                throw new ArgumentException();
+            }
         }
     }
 }

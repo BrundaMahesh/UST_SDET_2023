@@ -191,32 +191,40 @@ using Basic_Programs.ExceptionMessages;
 //genericCollection.DictionaryHandling();
 
 
-ExceptionHandling exceptionHandling= new ExceptionHandling(10,10);
+ExceptionHandling exceptionHandling= new ExceptionHandling(100,10);
 try
 {
-    exceptionHandling.Divide();
+    exceptionHandling.NumberCheck();
 }
-catch (ArithmeticException ex)
+catch(ArgumentException)
 {
-    //Console.WriteLine(ex.Message);
-    //Console.WriteLine(ex.StackTrace);
-    //Console.WriteLine(ex.Source);
-    Console.WriteLine(MyExceptions.exceptionList[0]);
+    Console.WriteLine(MyExceptions.exceptionList[3]);
+}
+//try
+//{
+//    exceptionHandling.Divide();
+//}
+//catch (ArithmeticException ex)
+//{
+//    //Console.WriteLine(ex.Message);
+//    //Console.WriteLine(ex.StackTrace);
+//    //Console.WriteLine(ex.Source);
+//    Console.WriteLine(MyExceptions.exceptionList[0]);
 
-}
-catch (IndexOutOfRangeException ex)
-{
-    Console.WriteLine(MyExceptions.exceptionList[1]);
-}
-catch (Exception ex)
-{
-    //Console.WriteLine(ex.Message);
-    Console.WriteLine(MyExceptions.exceptionList[2]);
-}
-finally
-{
-    Console.WriteLine("Done");
-}
+//}
+//catch (IndexOutOfRangeException ex)
+//{
+//    Console.WriteLine(MyExceptions.exceptionList[1]);
+//}
+//catch (Exception ex)
+//{
+//    //Console.WriteLine(ex.Message);
+//    Console.WriteLine(MyExceptions.exceptionList[2]);
+//}
+//finally
+//{
+//    Console.WriteLine("Done");
+//}
 
 
 

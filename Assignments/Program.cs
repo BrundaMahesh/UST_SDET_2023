@@ -119,10 +119,16 @@
 
 
 //26/10/23
-Customer customer=new Customer();
+//Customer customer=new Customer();
+//Console.WriteLine("enter phone number");
+//long phoneNumber=Convert.ToInt64(Console.ReadLine());
+//customer.InputPhoneNumber(phoneNumber);
+//customer.DisplayCustomer();
+
+CallRecord callRecord = new CallRecord();
 Console.WriteLine("enter phone number");
-long phoneNumber=Convert.ToInt64(Console.ReadLine());
-customer.InputPhoneNumber(phoneNumber);
-customer.DisplayCustomer();
+long phoneNumber = Convert.ToInt64(Console.ReadLine());
+callRecord.CallHistory(phoneNumber);
+
 
 

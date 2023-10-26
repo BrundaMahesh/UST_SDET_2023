@@ -1,4 +1,5 @@
 ﻿using Assignments;
+using System.Reflection;
 //18/10/2023           
 //Student student = new Student("RajKumar", 50, 80, 40);
 //Console.WriteLine($"Total=" +student.Total());
@@ -125,11 +126,20 @@
 //customer.InputPhoneNumber(phoneNumber);
 //customer.DisplayCustomer();
 
-CallRecord callRecord = new CallRecord();
-Console.WriteLine("enter phone number");
-long phoneNumber = Convert.ToInt64(Console.ReadLine());
-callRecord.CallHistory(phoneNumber);
-callRecord.TotalNoOfCalls();
+//CallRecord callRecord = new CallRecord();
+//Console.WriteLine("enter phone number");
+//long phoneNumber = Convert.ToInt64(Console.ReadLine());
+//callRecord.CallHistory(phoneNumber);
+//callRecord.TotalNoOfCalls();
+
+try
+{
+    
+}
+catch()
+{
+
+}
 
 
 

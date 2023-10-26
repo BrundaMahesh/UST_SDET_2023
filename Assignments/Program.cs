@@ -112,11 +112,17 @@
 //insurancePolicy.RenewPolicy(20000);
 //insurancePolicy.RenewPolicy();
 
-LifeInsurance lifeInsurance = new LifeInsurance("Gold", 84746563, 500000, 18);
-//Console.WriteLine(lifeInsurance.CalculatePremium());
-CarInsurance carInsurance = new CarInsurance("Bheema", 764846884, 300000, "Petrol");
-Console.WriteLine(carInsurance.CalculatePremium());
+//LifeInsurance lifeInsurance = new LifeInsurance("Gold", 84746563, 500000, 18);
+////Console.WriteLine(lifeInsurance.CalculatePremium());
+//CarInsurance carInsurance = new CarInsurance("Bheema", 764846884, 300000, "Petrol");
+//Console.WriteLine(carInsurance.CalculatePremium());
 
 
+//26/10/23
+Customer customer=new Customer();
+Console.WriteLine("enter phone number");
+long phoneNumber=Convert.ToInt64(Console.ReadLine());
+customer.InputPhoneNumber(phoneNumber);
+customer.DisplayCustomer();
 
 

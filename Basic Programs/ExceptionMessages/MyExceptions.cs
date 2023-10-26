@@ -21,6 +21,7 @@ namespace Basic_Programs.ExceptionMessages
             {1,"Index is out of Range" },
             {2,"Unknown Exception"},
             {3,"First number is not greater than or equal to 100"},
+            {4,"Second number must be lesser than 100" }
         };
 
         internal class NumberOneException : Exception

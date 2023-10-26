@@ -19,8 +19,7 @@ namespace Basic_Programs
 
         public void Divide()
         {
-            try
-            {
+            
                 int[] num={ 10,20,30};
 
                 //int result = FirstNumber / SecondNumber;
@@ -36,18 +35,7 @@ namespace Basic_Programs
                     int result = num[i] / SecondNumber;
                     Console.WriteLine(result);
                 }
-            }
-            catch(ArithmeticException ex) 
-            {
-                //Console.WriteLine(ex.Message);
-                Console.WriteLine(ex.StackTrace);
-                //Console.WriteLine(ex.Source);
-                Console.WriteLine("Denominator cannot be zero");
-            }
-            catch(IndexOutOfRangeException ex)
-            {
-                Console.WriteLine(ex.StackTrace);
-            }
+            
             
         }
     }

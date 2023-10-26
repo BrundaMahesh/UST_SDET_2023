@@ -47,6 +47,7 @@
 
 //*************driver*********************//
 using Basic_Programs;
+using Basic_Programs.ExceptionMessages;
 
 //Calculation calculation = new Calculation();
 //int firstNumber = Convert.ToInt32(Console.ReadLine());
@@ -190,5 +191,32 @@ using Basic_Programs;
 //genericCollection.DictionaryHandling();
 
 
-ExceptionHandling exceptionHandling= new ExceptionHandling(10,0);
-exceptionHandling.Divide();
+ExceptionHandling exceptionHandling= new ExceptionHandling(10,10);
+try
+{
+    exceptionHandling.Divide();
+}
+catch (ArithmeticException ex)
+{
+    //Console.WriteLine(ex.Message);
+    //Console.WriteLine(ex.StackTrace);
+    //Console.WriteLine(ex.Source);
+    Console.WriteLine(MyExceptions.exceptionList[0]);
+
+}
+catch (IndexOutOfRangeException ex)
+{
+    Console.WriteLine(MyExceptions.exceptionList[1]);
+}
+catch (Exception ex)
+{
+    //Console.WriteLine(ex.Message);
+    Console.WriteLine(MyExceptions.exceptionList[2]);
+}
+finally
+{
+    Console.WriteLine("Done");
+}
+
+
+

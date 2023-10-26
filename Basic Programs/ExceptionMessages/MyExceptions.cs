@@ -22,6 +22,19 @@ namespace Basic_Programs.ExceptionMessages
             {2,"Unknown Exception"},
             {3,"First number is not greater than or equal to 100"},
         };
-             
+
+        internal class NumberOneException : Exception
+        {
+            public NumberOneException(string message) : base(message)
+            {
+            }
+        }
+
+        internal class NumberTwoException : Exception
+        {
+            public NumberTwoException(string message) : base(message)
+            {
+            }
+        }
     }
 }

@@ -48,6 +48,7 @@
 //*************driver*********************//
 using Basic_Programs;
 using Basic_Programs.ExceptionMessages;
+using static Basic_Programs.ExceptionMessages.MyExceptions;
 
 //Calculation calculation = new Calculation();
 //int firstNumber = Convert.ToInt32(Console.ReadLine());
@@ -191,19 +192,48 @@ using Basic_Programs.ExceptionMessages;
 //genericCollection.DictionaryHandling();
 
 
-ExceptionHandling exceptionHandling= new ExceptionHandling(10,10);
+ExceptionHandling exceptionHandling= new ExceptionHandling(10,100);
 try
 {
     exceptionHandling.NumberCheck();
 }
-//catch(ArgumentException)
-//{
-//    Console.WriteLine(MyExceptions.exceptionList[3]);
-//}
-catch(ArgumentException ex)
+catch (NumberOneException ex)
 {
     Console.WriteLine(ex.Message);
 }
+try
+{
+    exceptionHandling.NumberCheckOne();
+}
+catch (NumberTwoException ex)
+{
+    Console.WriteLine(ex.Message);
+}
+//try
+//{
+//    exceptionHandling.NumberCheck();
+//}
+////catch(ArgumentException)
+////{
+////    Console.WriteLine(MyExceptions.exceptionList[3]);
+////}
+//catch(ArgumentException ex)
+//{
+//    Console.WriteLine(ex.Message);
+//}
+
+//try
+//{
+//    exceptionHandling.NumberCheckOne();
+//}
+////catch(ArgumentException)
+////{
+////    Console.WriteLine(MyExceptions.exceptionList[3]);
+////}
+//catch (ArgumentException ex)
+//{
+//    Console.WriteLine(ex.Message);
+//}
 
 //try
 //{

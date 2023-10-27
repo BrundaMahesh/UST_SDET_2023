@@ -152,20 +152,56 @@ using static Assignments.ExceptionMessages.MyException;
 
 
 //27/10/2023
-MedicalRecord medicalRecord = new MedicalRecord();
-try
+//MedicalRecord medicalRecord = new MedicalRecord();
+//try
+//{
+//    medicalRecord.AddMedicalRecord(10,"Arun", 23, "Thyroid", 455, 3000);
+//    MedicalRecord.Display();
+//}
+//catch(InvalidPatientDataException ex)
+//{
+//    Console.WriteLine(ex.Message);
+//}
+//catch(InvalidMedicalRecordException ex)
+//{
+//    Console.WriteLine(ex.Message);
+//}
+
+Patient patient = new Patient();
+int option = 1;
+do
 {
-    medicalRecord.AddMedicalRecord(10,"Arun", 23, "Thyroid", 455, 3000);
-    MedicalRecord.Display();
+   Console.WriteLine("****Patient Details***");
+Console.WriteLine("1.Add patient records");
+Console.WriteLine("2.View patient records");
+Console.WriteLine("3.Exit program");
+int choice=Convert.ToInt32(Console.ReadLine());
+
+
+
+
+    switch (choice)
+    {
+        case 1:
+            patient.AddPatientToFile(4, "Tom", 78, "Thyroid");
+            break;
+        case 2:
+            patient.ViewPatientDataFromFile();
+            break;
+        case 3:
+            Environment.Exit(0);
+            break;
+        default:
+            Console.WriteLine("Invalid choice");
+            break;
+
+    }
+    Console.WriteLine("Do you want to continue?\n1.Yes\n2.No\n");
+    option = Convert.ToInt32(Console.ReadLine());
 }
-catch(InvalidPatientDataException ex)
-{
-    Console.WriteLine(ex.Message);
-}
-catch(InvalidMedicalRecordException ex)
-{
-    Console.WriteLine(ex.Message);
-}
+while (option != 2);
+
+
 
 
 

@@ -1,6 +1,7 @@
 ﻿using Assignments.ExceptionMessages;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,6 +46,33 @@ namespace Assignments
             {
                 Console.WriteLine("Id:"+item.Id +"\n" +"Name:"+item.Name+"\n" +"Age:"+item.Age+"\n"+"Diagnosis:"+item.Diagnosis);
             }
+        }
+
+        public void AddPatientToFile(int Id,string Name,int Age,string Diagnosis)
+        {
+           FileStream fileStream= new FileStream("C:\\Users\\Administrator\\Desktop\\Files\\Patient.txt", FileMode.Create, FileAccess.Write);
+           StreamWriter streamWriter = new StreamWriter(fileStream);
+            streamWriter.WriteLine("Patient Id:"+Id);
+            streamWriter.WriteLine("Patient Name:"+Name);
+            streamWriter.WriteLine("Age:"+Age);
+            streamWriter.WriteLine("Diagnosis:"+Diagnosis);
+            streamWriter.Close();
+            fileStream.Close();
+
+        }
+        public void ViewPatientDataFromFile()
+        {
+            FileStream fileStream1 = new FileStream("C:\\Users\\Administrator\\Desktop\\Files\\Patient.txt", FileMode.Open, FileAccess.Read);
+            StreamReader streamReader = new StreamReader(fileStream1);
+            streamReader.BaseStream.Seek(0, SeekOrigin.Begin);
+            string str = streamReader.ReadLine();
+            while (str != null)
+            {
+                Console.WriteLine(str);
+                str = streamReader.ReadLine();
+            }
+            streamReader.Close();
+            fileStream1.Close();
         }
     }
     

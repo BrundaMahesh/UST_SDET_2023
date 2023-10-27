@@ -192,23 +192,23 @@ using static Basic_Programs.ExceptionMessages.MyExceptions;
 //genericCollection.DictionaryHandling();
 
 
-ExceptionHandling exceptionHandling= new ExceptionHandling(10,100);
-try
-{
-    exceptionHandling.NumberCheck();
-}
-catch (NumberOneException ex)
-{
-    Console.WriteLine(ex.Message);
-}
-try
-{
-    exceptionHandling.NumberCheckOne();
-}
-catch (NumberTwoException ex)
-{
-    Console.WriteLine(ex.Message);
-}
+//ExceptionHandling exceptionHandling= new ExceptionHandling(10,100);
+//try
+//{
+//    exceptionHandling.NumberCheck();
+//}
+//catch (NumberOneException ex)
+//{
+//    Console.WriteLine(ex.Message);
+//}
+//try
+//{
+//    exceptionHandling.NumberCheckOne();
+//}
+//catch (NumberTwoException ex)
+//{
+//    Console.WriteLine(ex.Message);
+//}
 //try
 //{
 //    exceptionHandling.NumberCheck();
@@ -261,5 +261,8 @@ catch (NumberTwoException ex)
 //    Console.WriteLine("Done");
 //}
 
+
+FileOperation fileOperation = new FileOperation();
+fileOperation.CreateFile();
 
 

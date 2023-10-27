@@ -45,5 +45,33 @@ namespace Basic_Programs
             streamReader.Close();
             fileStream1.Close();
         }
+
+        public void CopyMoveFile()
+        {
+            FileInfo fileInfo1 = new FileInfo("C:\\Users\\Administrator\\Desktop\\Files\\Sample.txt");
+            FileInfo fileInfo2 = new FileInfo("C:\\Users\\Administrator\\Desktop\\Files\\Sample2.txt");
+
+            fileInfo1.CopyTo("C:\\Users\\Administrator\\Desktop\\Files\\Temp1\\Sample.txt");
+            fileInfo2.MoveTo("C:\\Users\\Administrator\\Desktop\\Files\\Temp2\\Sample2.txt");
+
+        }
+
+        public void DeleteFile()
+        {
+            FileInfo fileInfo = new FileInfo("C:\\Users\\Administrator\\Desktop\\Files\\Temp1\\Sample.txt");
+            fileInfo.Delete();
+        }
+
+        public void FileProperties()
+        {
+            FileInfo file = new FileInfo("C:\\Users\\Administrator\\Desktop\\Files\\Sample.txt");
+            Console.WriteLine(file.Name);
+            Console.WriteLine(file.CreationTime);
+            Console.WriteLine(file.LastAccessTime);
+            Console.WriteLine(file.LastWriteTime);
+            Console.WriteLine(file.Exists);
+            Console.WriteLine(file.Extension);
+            Console.WriteLine(file.Length.ToString());
+        }
     }
 }

@@ -265,5 +265,7 @@ using static Basic_Programs.ExceptionMessages.MyExceptions;
 FileOperation fileOperation = new FileOperation();
 //fileOperation.CreateFile();
 //fileOperation.WriteData();
-fileOperation.ReadData();
-
+//fileOperation.ReadData();
+//fileOperation.CopyMoveFile();
+//fileOperation.DeleteFile();
+fileOperation.FileProperties();

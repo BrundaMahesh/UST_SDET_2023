@@ -23,13 +23,17 @@ namespace Assignments
             {
                 throw new CustomException(ErrorMessages["Error1"]);
             }
-            if(string.IsNullOrEmpty(Name))
+            else if(string.IsNullOrEmpty(Name))
             {
                 throw new CustomException(ErrorMessages["Error2"]);
             }
-            if(string.IsNullOrEmpty(Diagnosis))
+            else if(string.IsNullOrEmpty(Diagnosis))
             {
                 throw new CustomException(ErrorMessages["Error3"]);
+            }
+            else
+            {
+                patients.Add(new Patient { Id = Id, Name = Name, Age = Age, Diagnosis = Diagnosis });
             }
         }
 

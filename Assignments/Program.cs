@@ -138,8 +138,9 @@ try
 {
     //patient.AddPatient(1, "Harini", 150, "Sugar");
     //patient.AddPatient(2, "", 34, "BP");
-    // patient.AddPatient(3, "John", 67, "");
+    //patient.AddPatient(3, "John", 67, "");
     patient.AddPatient(4, "Tom", 78, "Thyroid");
+    Patient.Display();
 
 
 }
@@ -147,7 +148,7 @@ catch (CustomException ex)
 {
     Console.WriteLine(ex.Message);
 }
-Patient.Display();
+
 
 
 

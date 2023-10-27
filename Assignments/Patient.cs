@@ -32,8 +32,9 @@ namespace Assignments
                 throw new CustomException(ErrorMessages["Error3"]);
             }
         }
+
         
-        public void Display()
+        public static void Display()
         {
             Console.WriteLine("Patient details");
             foreach (var item in patients)

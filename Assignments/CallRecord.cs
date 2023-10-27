@@ -15,6 +15,7 @@ namespace Assignments
         public static List<CallRecord> CallRecords = new List<CallRecord>()
         { 
             new CallRecord { CallId = 145, PhoneNumber = 9846745678, CallTime = 2 },
+            new CallRecord { CallId = 145, PhoneNumber = 9846745678, CallTime = 2 },
             new CallRecord { CallId = 746, PhoneNumber = 9647476453, CallTime = 4 },
             new CallRecord { CallId = 567, PhoneNumber = 9745698563, CallTime = 7 },
         };

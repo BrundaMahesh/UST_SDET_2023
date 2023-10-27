@@ -1,4 +1,5 @@
 ﻿using Assignments;
+using Assignments.ExceptionMessages;
 using System.Reflection;
 using static Assignments.ExceptionMessages.MyException;
 //18/10/2023           
@@ -133,22 +134,38 @@ using static Assignments.ExceptionMessages.MyException;
 //callRecord.CallHistory(phoneNumber);
 //callRecord.TotalNoOfCalls();
 
-Patient patient = new Patient();
+//Patient patient = new Patient();
+//try
+//{
+//    //patient.AddPatient(1, "Harini", 150, "Sugar");
+//    //patient.AddPatient(2, "", 34, "BP");
+//    //patient.AddPatient(3, "John", 67, "");
+//    patient.AddPatient(4, "Tom", 78, "Thyroid");
+//    Patient.Display();
+
+
+//}
+//catch (CustomException ex)
+//{
+//    Console.WriteLine(ex.Message);
+//}
+
+
+//27/10/2023
+MedicalRecord medicalRecord = new MedicalRecord();
 try
 {
-    //patient.AddPatient(1, "Harini", 150, "Sugar");
-    //patient.AddPatient(2, "", 34, "BP");
-    //patient.AddPatient(3, "John", 67, "");
-    patient.AddPatient(4, "Tom", 78, "Thyroid");
-    Patient.Display();
-
-
+    medicalRecord.AddMedicalRecord(10,"Arun", 23, "Thyroid", 455, 3000);
+    MedicalRecord.Display();
 }
-catch (CustomException ex)
+catch(InvalidPatientDataException ex)
 {
     Console.WriteLine(ex.Message);
 }
-
+catch(InvalidMedicalRecordException ex)
+{
+    Console.WriteLine(ex.Message);
+}
 
 
 

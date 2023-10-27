@@ -36,10 +36,21 @@ namespace Assignments
         {
             FileStream fileStream1 = new FileStream("C:\\Users\\Administrator\\Desktop\\Files\\MedicalHistory.txt", FileMode.Open, FileAccess.Read);
             StreamReader streamReader = new StreamReader(fileStream1);
-            string str = streamReader.ReadToEnd();
-            Console.WriteLine(str);
+            Console.WriteLine("Enter the patient id");
+            string patientId = Console.ReadLine();
+            if("MedicalHistory.txt".Contains(patientId))
+            {
+                string str=streamReader.ReadLine();
+                Console.WriteLine(str);
+            }
+            else
+            {
+                Console.WriteLine("Medical record is not found with this patient id");
+            }
+            
             streamReader.Close();
             fileStream1.Close();
         }
+
     }
 }

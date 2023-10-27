@@ -38,7 +38,7 @@ namespace Assignments
             StreamReader streamReader = new StreamReader(fileStream1);
             Console.WriteLine("Enter the patient id");
             string patientId = Console.ReadLine();
-            if("MedicalHistory.txt".Contains(patientId))
+            if()
             {
                 string str=streamReader.ReadLine();
                 Console.WriteLine(str);

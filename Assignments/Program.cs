@@ -167,26 +167,57 @@ using static Assignments.ExceptionMessages.MyException;
 //    Console.WriteLine(ex.Message);
 //}
 
-Patient patient = new Patient();
-int option = 1;
+//Patient patient = new Patient();
+//int option = 1;
+//do
+//{
+//   Console.WriteLine("****Patient Details***");
+//Console.WriteLine("1.Add patient records");
+//Console.WriteLine("2.View patient records");
+//Console.WriteLine("3.Exit program");
+//int choice=Convert.ToInt32(Console.ReadLine());
+
+
+//    switch (choice)
+//    {
+//        case 1:
+//            patient.AddPatientToFile(4, "Tom", 78, "Thyroid");
+//            break;
+//        case 2:
+//            patient.ViewPatientDataFromFile();
+//            break;
+//        case 3:
+//            Environment.Exit(0);
+//            break;
+//        default:
+//            Console.WriteLine("Invalid choice");
+//            break;
+
+//    }
+//    Console.WriteLine("Do you want to continue?\n1.Yes\n2.No\n");
+//    option = Convert.ToInt32(Console.ReadLine());
+//}
+//while (option != 2);
+
+
+MedicalHistory medicalHistory = new MedicalHistory();
+    int option = 1;
 do
 {
-   Console.WriteLine("****Patient Details***");
-Console.WriteLine("1.Add patient records");
-Console.WriteLine("2.View patient records");
-Console.WriteLine("3.Exit program");
-int choice=Convert.ToInt32(Console.ReadLine());
-
-
+    Console.WriteLine("****Medical Record***");
+    Console.WriteLine("1.Add records");
+    Console.WriteLine("2.View record for a specific patient");
+    Console.WriteLine("3.Exit program");
+    int choice = Convert.ToInt32(Console.ReadLine());
 
 
     switch (choice)
     {
         case 1:
-            patient.AddPatientToFile(4, "Tom", 78, "Thyroid");
+           medicalHistory.AddRecordToFile(100,12,"Diabetis","November 23");
             break;
         case 2:
-            patient.ViewPatientDataFromFile();
+            medicalHistory.ViewRecordFromFile();
             break;
         case 3:
             Environment.Exit(0);

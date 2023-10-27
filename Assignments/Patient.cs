@@ -64,15 +64,9 @@ namespace Assignments
         {
             FileStream fileStream1 = new FileStream("C:\\Users\\Administrator\\Desktop\\Files\\Patient.txt", FileMode.Open, FileAccess.Read);
             StreamReader streamReader = new StreamReader(fileStream1);
-            streamReader.BaseStream.Seek(0, SeekOrigin.Begin);
-            string str = streamReader.ReadLine();
-            while (str != null)
-            {
-                Console.WriteLine(str);
-                str = streamReader.ReadLine();
-            }
+            string str=streamReader.ReadToEnd();
+            Console.WriteLine(str);
             streamReader.Close();
-            fileStream1.Close();
         }
     }
     

@@ -263,6 +263,7 @@ using static Basic_Programs.ExceptionMessages.MyExceptions;
 
 
 FileOperation fileOperation = new FileOperation();
-fileOperation.CreateFile();
-
+//fileOperation.CreateFile();
+//fileOperation.WriteData();
+fileOperation.ReadData();
 

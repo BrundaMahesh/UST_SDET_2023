@@ -28,12 +28,13 @@ namespace CaseStudy
 
         public void Processing()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Payment processed for this digital product:"+Name);
         }
 
         public void DeliveringProduct(Customers customers)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Sending download link for {Name} to {customers.Name}");
+            Console.WriteLine($"DownloadLink:{DownloadLink}");
         }
     }
 }

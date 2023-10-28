@@ -12,10 +12,6 @@ namespace CaseStudy
         public double Weight { get; set; }
         public double Dimensions {  get; set; }
 
-        public void DeliveringProduct(Customers customers)
-        {
-            throw new NotImplementedException();
-        }
 
         public void PlaceOrder(Customers customers, int quantity)
         {
@@ -31,7 +27,12 @@ namespace CaseStudy
 
         public void Processing()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Payment processed for this physical product:" + Name);
+        }
+
+        public void DeliveringProduct(Customers customers)
+        {
+            Console.WriteLine($"Shipping physical product {Name} to {customers.Name}");
         }
     }
 }

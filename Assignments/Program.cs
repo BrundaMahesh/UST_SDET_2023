@@ -217,7 +217,7 @@ do
            medicalHistory.AddRecordToFile(100,12,"Diabetis","November 23");
             break;
         case 2:
-            medicalHistory.ViewRecordFromFile();
+            //medicalHistory.ViewRecordFromFile();
             break;
         case 3:
             Environment.Exit(0);

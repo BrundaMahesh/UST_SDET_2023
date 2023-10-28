@@ -24,33 +24,33 @@ namespace Assignments
         {
             FileStream fileStream = new FileStream("C:\\Users\\Administrator\\Desktop\\Files\\MedicalHistory.txt", FileMode.Create, FileAccess.Write);
             StreamWriter streamWriter = new StreamWriter(fileStream);
-            streamWriter.WriteLine("Record Id:" + RecordId);
-            streamWriter.WriteLine("Patient Id:" + PatientId);
-            streamWriter.WriteLine("Description:" + Description);
-            streamWriter.WriteLine("Date:" + Date);
+            streamWriter.Write("Record Id:" + RecordId);
+            streamWriter.Write("Patient Id:" + PatientId);
+            streamWriter.Write("Description:" + Description);
+            streamWriter.Write("Date:" + Date);
             streamWriter.Close();
             fileStream.Close();
 
         }
-        public void ViewRecordFromFile()
-        {
-            FileStream fileStream1 = new FileStream("C:\\Users\\Administrator\\Desktop\\Files\\MedicalHistory.txt", FileMode.Open, FileAccess.Read);
-            StreamReader streamReader = new StreamReader(fileStream1);
-            Console.WriteLine("Enter the patient id");
-            string patientId = Console.ReadLine();
-            if()
-            {
-                string str=streamReader.ReadLine();
-                Console.WriteLine(str);
-            }
-            else
-            {
-                Console.WriteLine("Medical record is not found with this patient id");
-            }
+        //public void ViewRecordFromFile()
+        //{
+        //    FileStream fileStream1 = new FileStream("C:\\Users\\Administrator\\Desktop\\Files\\MedicalHistory.txt", FileMode.Open, FileAccess.Read);
+        //    StreamReader streamReader = new StreamReader(fileStream1);
+        //    Console.WriteLine("Enter the patient id");
+        //    string patientId = Console.ReadLine();
+        //    if()
+        //    {
+        //        string str=streamReader.ReadLine();
+        //        Console.WriteLine(str);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Medical record is not found with this patient id");
+        //    }
             
-            streamReader.Close();
-            fileStream1.Close();
-        }
+        //    streamReader.Close();
+        //    fileStream1.Close();
+        //}
 
     }
 }

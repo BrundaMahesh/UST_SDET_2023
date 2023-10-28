@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace CaseStudy
 {
-    internal class Customer1
+    internal class Customers
     {
         public int CustomerID {  get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
+        public string? Name { get; set; }
+        public string? Email { get; set; }
+
        
     }
 }

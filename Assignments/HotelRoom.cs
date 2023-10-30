@@ -8,5 +8,8 @@ namespace Assignments
 {
     internal class HotelRoom
     {
+        public int RoomNumber {  get; set; }
+        public string RoomType { get; set; }
+        public bool IsBooked {  get; set; }
     }
 }

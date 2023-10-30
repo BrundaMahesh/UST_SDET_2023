@@ -11,7 +11,7 @@ namespace CaseStudy
     {
         public static List<PhysicalProduct> Products = new List<PhysicalProduct>();
         public double Weight { get; set; }
-        public string Dimensions {  get; set; }
+        public string? Dimensions {  get; set; }
 
 
         public void PlacingOrder()

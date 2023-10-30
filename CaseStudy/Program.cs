@@ -284,7 +284,7 @@ try
         }
         else if (option == 2)
         {
-            Console.WriteLine("choose option\n1.Add Product\n2.View report");
+            Console.WriteLine("choose option\n1.Add Product");
             int optionadmin = Convert.ToInt32(Console.ReadLine());
             if (optionadmin == 1)
             {

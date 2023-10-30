@@ -9,13 +9,15 @@ namespace Assignments
     internal class RoomReservation<T>
     {
         public static List<T> reservationList= new List<T>();
-        public void AddRoom(T Room)
+        public void BookRoom(T Room)
         {
             reservationList.Add(Room);
+            Console.WriteLine("Room booked successfully!!!");
         }
-        public void RemoveRoom(T Room)
+        public void CancelRoom(T Room)
         {
             reservationList.Remove(Room);
+            Console.WriteLine("Room cancelled successfully!!!");
         }
     }
 }

@@ -200,37 +200,64 @@ using static Assignments.ExceptionMessages.MyException;
 //while (option != 2);
 
 
-MedicalHistory medicalHistory = new MedicalHistory();
-    int option = 1;
-do
+//MedicalHistory medicalHistory = new MedicalHistory();
+//    int option = 1;
+//do
+//{
+//    Console.WriteLine("****Medical Record***");
+//    Console.WriteLine("1.Add records");
+//    Console.WriteLine("2.View record for a specific patient");
+//    Console.WriteLine("3.Exit program");
+//    int choice = Convert.ToInt32(Console.ReadLine());
+
+
+//    switch (choice)
+//    {
+//        case 1:
+//           medicalHistory.AddRecordToFile(100,12,"Diabetis","November 23");
+//            break;
+//        case 2:
+//            //medicalHistory.ViewRecordFromFile();
+//            break;
+//        case 3:
+//            Environment.Exit(0);
+//            break;
+//        default:
+//            Console.WriteLine("Invalid choice");
+//            break;
+
+//    }
+//    Console.WriteLine("Do you want to continue?\n1.Yes\n2.No\n");
+//    option = Convert.ToInt32(Console.ReadLine());
+//}
+//while (option != 2);
+
+
+//30/10/2023
+Console.WriteLine("*****Room reservation system*****\n");
+Console.Write("enter room number:");
+int roomNumber=Convert.ToInt32(Console.ReadLine());
+Console.Write("enter room type(Single/Double):");
+string? roomType=Console.ReadLine();
+HotelRoom hotelRoom=new HotelRoom(roomNumber, roomType,true);
+RoomReservation<HotelRoom> roomReservation = new RoomReservation<HotelRoom>();
+roomReservation.BookRoom(hotelRoom);
+Console.WriteLine("\nDetails of room:");
+foreach (var item in RoomReservation<HotelRoom>.reservationList)
 {
-    Console.WriteLine("****Medical Record***");
-    Console.WriteLine("1.Add records");
-    Console.WriteLine("2.View record for a specific patient");
-    Console.WriteLine("3.Exit program");
-    int choice = Convert.ToInt32(Console.ReadLine());
-
-
-    switch (choice)
-    {
-        case 1:
-           medicalHistory.AddRecordToFile(100,12,"Diabetis","November 23");
-            break;
-        case 2:
-            //medicalHistory.ViewRecordFromFile();
-            break;
-        case 3:
-            Environment.Exit(0);
-            break;
-        default:
-            Console.WriteLine("Invalid choice");
-            break;
-
-    }
-    Console.WriteLine("Do you want to continue?\n1.Yes\n2.No\n");
-    option = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Room number:"+roomNumber +"\n"+ "Room type:"+roomType);
 }
-while (option != 2);
+Console.Write("\nenter room number:");
+int roomNumber1 = Convert.ToInt32(Console.ReadLine());
+HotelRoom found=RoomReservation<HotelRoom>.reservationList.Find(x=> x.RoomNumber == roomNumber1);
+if(found==null)
+{
+    Console.WriteLine("No room found to cancel");
+}
+else
+{
+    roomReservation.CancelRoom(found);
+}
 
 
 

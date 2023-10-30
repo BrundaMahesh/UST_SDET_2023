@@ -300,7 +300,7 @@ while (true)
                 double productCost = Convert.ToDouble(Console.ReadLine());
                 Console.Write("enter the fileformat:");
                 string? fileFormat = Console.ReadLine();
-                Console.Write("enter downloadLink:");
+                Console.Write("enter the downloadLink:");
                 string? downloadLink = Console.ReadLine();
 
 

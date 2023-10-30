@@ -26,18 +26,18 @@ namespace CaseStudy
 
         public void PlacingOrder()
         {
-            Console.WriteLine("Do you want to continue the order\n1.yes\n2.no");
+            Console.WriteLine("Do you want to continue the order?\n1.yes\n2.no");
             int option = Convert.ToInt32(Console.ReadLine());
             if (option == 1)
             {
                 if (StockQuantity > 0)
                     Console.WriteLine("Continue to payment...");
                 else
-                    Console.WriteLine("product not available");
+                    Console.WriteLine("Product not available");
             }
             else
             {
-                Console.WriteLine("Returning the product");
+                Console.WriteLine("Reverting back");
             }
         }
 
@@ -47,7 +47,7 @@ namespace CaseStudy
             string? crednum = Console.ReadLine();
             if (crednum == null)
             {
-                Console.WriteLine("invalid number");
+                Console.WriteLine("Invalid number");
             }
             else
             {
@@ -55,9 +55,6 @@ namespace CaseStudy
             }
         }
 
-        public void Processing()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

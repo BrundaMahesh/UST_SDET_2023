@@ -10,9 +10,10 @@ namespace CaseStudy.CustomException
     {
         public static Dictionary<string, string> ErrorMessages { get; set; } = new Dictionary<string, string>()
         {
-            {"Error1","Insufficient stock" },
-            {"Error2","Order failed" },
-            
+           
+            {"Error1","Product Id should be greater than zero"},
+            {"Error4","Product name not Null"}
+
         };
     }
     internal class OrderException : Exception

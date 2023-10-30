@@ -27,7 +27,7 @@ namespace CaseStudy
             }
             else
             {
-                Console.WriteLine("Returning the product");
+                Console.WriteLine("Reverting back");
             }
         }
 

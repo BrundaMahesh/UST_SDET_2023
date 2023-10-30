@@ -12,7 +12,7 @@ namespace CaseStudy.CustomException
         {
            
             {"Error1","Product Id should be greater than zero"},
-            {"Error4","Product name not Null"}
+            {"Error2","Product name cannot be null or empty"}
 
         };
     }

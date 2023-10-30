@@ -23,7 +23,7 @@ namespace CaseStudy
             }
             if (string.IsNullOrEmpty(product.Name))
             {
-                throw new OrderException(MyException.ErrorMessages["Error4"]);
+                throw new OrderException(MyException.ErrorMessages["Error2"]);
             }
         }
         public static void AddProduct1(PhysicalProduct product)
@@ -34,7 +34,7 @@ namespace CaseStudy
             }
             if (string.IsNullOrEmpty(product.Name))
             {
-                throw new OrderException(MyException.ErrorMessages["Error4"]);
+                throw new OrderException(MyException.ErrorMessages["Error2"]);
             }
         }
     }

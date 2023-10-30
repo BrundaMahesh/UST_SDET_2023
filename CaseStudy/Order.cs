@@ -8,21 +8,22 @@ namespace CaseStudy
 {
     internal class Order
     {
-        public Order(int orderDate, double totalPrice)
+        public Order(string? orderDate, double totalCost)
         {
-            //ListOfBooks = listOfBooks;
             OrderDate = orderDate;
-            TotalPrice = totalPrice;
+            TotalCost = totalCost;
         }
 
-       // public string[] ListOfBooks { get; set; }
-        public int OrderDate {  get; set; }
-        public double TotalPrice { get; set; }
+        public string? OrderDate { get; set; }
+        public double TotalCost { get; set; }
 
-        public void OrderPlaced()
+        public void OrderConfirmed()
         {
-            Console.WriteLine("Order date:"+OrderDate +"\n" +"Total price:"+TotalPrice);
+            Console.WriteLine("Order Date :" + OrderDate);
+            Console.WriteLine("Total Cost :" + TotalCost);
         }
-        
+
+
+
     }
 }

@@ -9,32 +9,55 @@ namespace CaseStudy
 {
     internal class DigitalProduct:Product,IOrderable
     {
+        public static List<DigitalProduct> Products = new List<DigitalProduct>();   
         public string? DownloadLink {  get; set; }
         public string? FileFormat { get; set; }
 
-       
 
-        public void PlaceOrder(Customers customers, int quantity)
+
+        public void DeliveringProduct()
         {
-            if (StockQuantity >= quantity)
+            Console.WriteLine("Download link is {0}", DownloadLink);
+        }
+
+      
+
+        
+
+        public void PlacingOrder()
+        {
+            Console.WriteLine("Do you want to continue the order\n1.yes\n2.no");
+            int option = Convert.ToInt32(Console.ReadLine());
+            if (option == 1)
             {
-                StockQuantity -= quantity;
+                if (StockQuantity > 0)
+                    Console.WriteLine("Continue to payment");
+                else
+                    Console.WriteLine("product not available");
             }
             else
             {
-                throw new OrderException(MyException.ErrorMessages["Error1"]);
+                Console.WriteLine("Returning");
+            }
+        }
+
+        public void ProceesingPayment()
+        {
+            Console.WriteLine("Enter the card details for product {0}", Name);
+            string? crednum = Console.ReadLine();
+            if (crednum == null)
+            {
+                Console.WriteLine("invalid number");
+            }
+            else
+            {
+                Console.WriteLine("Payment successful");
             }
         }
 
         public void Processing()
         {
-            Console.WriteLine("Payment processed for this digital product:"+Name);
-        }
-
-        public void DeliveringProduct(Customers customers)
-        {
-            Console.WriteLine($"Sending download link for {Name} to {customers.Name}");
-            Console.WriteLine($"DownloadLink:{DownloadLink}");
+            throw new NotImplementedException();
         }
     }
 }

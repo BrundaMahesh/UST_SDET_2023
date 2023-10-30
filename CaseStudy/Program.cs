@@ -140,7 +140,7 @@ while (true)
         int cusId = Convert.ToInt32(Console.ReadLine());
         if (Customers.customers.Find(x => x.CustomerID == cusId) == null)
         {
-            Console.WriteLine("Customer not found");
+            Console.WriteLine("Customer not found!!");
             break;
         }
         Console.WriteLine("choose your option\n1.Add product to cart\n2.view all product\n3.place order\n4.Support\n5.view orders");
@@ -150,7 +150,7 @@ while (true)
 
             case 1:
 
-                Console.WriteLine("enter product id to add it to the cart");
+                Console.WriteLine("enter product id to add product to the cart");
                 int productId = Convert.ToInt32(Console.ReadLine());
                 Customers customer1 = Customers.customers.Find(x => x.CustomerID == cusId);
                 if (DigitalProduct.Products.Find(x => x.ProductID == productId) == null)
@@ -336,7 +336,7 @@ while (true)
             }
             else
             {
-                Console.WriteLine("Invalid");
+                Console.WriteLine("Invalid input");
             }
         }
     }

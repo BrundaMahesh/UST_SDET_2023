@@ -129,10 +129,10 @@ customer3.CustomerID = 3;
 customer3.CustomerName = "Arun Kumar";
 customer3.CustomerEmail = "arun@gmail.com";
 Customers.customers.Add(customer3);
-
+Console.WriteLine("*****E-Commerce Order fullfillment System*****\n");
 while (true)
 {
-    Console.WriteLine("choose your option\n1.User\n2.Admin");
+    Console.WriteLine("choose your option:\n1.User\n2.Admin");
     int option = Convert.ToInt32(Console.ReadLine());
     if (option == 1)
     {
@@ -150,25 +150,25 @@ while (true)
 
             case 1:
 
-                Console.WriteLine("enter Product id for add to cart");
+                Console.WriteLine("enter product id to add it to the cart");
                 int productId = Convert.ToInt32(Console.ReadLine());
                 Customers customer1 = Customers.customers.Find(x => x.CustomerID == cusId);
                 if (DigitalProduct.Products.Find(x => x.ProductID == productId) == null)
                 {
                     if (PhysicalProduct.Products.Find(x => x.ProductID == productId) == null)
                     {
-                        Console.WriteLine("invalid product id");
+                        Console.WriteLine("Invalid product id");
                     }
                     else
                     {
                         customer1.ordersphy.Add(PhysicalProduct.Products.Find(x => x.ProductID == productId));
-                        Console.WriteLine("product successfully added to cart");
+                        Console.WriteLine("Product successfully added to cart!!");
                     }
                 }
                 else
                 {
                     customer1.orders.Add(DigitalProduct.Products.Find(x => x.ProductID == productId));
-                    Console.WriteLine("product successfully added to cart");
+                    Console.WriteLine("Product successfully added to cart!!");
                 }
                 break;
             case 2:
@@ -214,7 +214,7 @@ while (true)
                         item.ProceesingPayment();
                         item.DeliveringProduct();
                     }
-                    Console.WriteLine("Do you want to place all the orders\n1.yes\n2.no");
+                    Console.WriteLine("Do you want to place order?\n1.yes\n2.no");
                     int confirm = Convert.ToInt32(Console.ReadLine());
                     if (confirm == 1)
                     {
@@ -236,7 +236,7 @@ while (true)
 
                 break;
             case 4:
-                Console.WriteLine("call this number for support 080-3455643");
+                Console.WriteLine("For support call this number 080-3455643");
                 break;
             case 5:
                 Customers customer2 = Customers.customers.Find(x => x.CustomerID == cusId);
@@ -249,12 +249,12 @@ while (true)
                     Console.WriteLine("Orders are:");
                     foreach (var item in customer2.confirmedorders)
                     {
-                        Console.WriteLine("Productid:{0}\tProduct Name:{1}\tPrice:{2}\tProduct Quantity:{3}\tFileFormat:{4}\tDownloadlink:{5}", item.ProductID,
+                        Console.WriteLine("Product id:{0}\tProduct name:{1}\tPrice:{2}\tProduct Quantity:{3}\tFileFormat:{4}\tDownloadlink:{5}", item.ProductID,
                         item.Name, item.Price, item.StockQuantity, item.FileFormat, item.DownloadLink);
                     }
                     foreach (var item in customer2.confirmedordersphy)
                     {
-                        Console.WriteLine("Productid:{0}\tProduct Name:{1}\tPrice:{2}\tProduct Quantity:{3}\tWeight:{4}" +
+                        Console.WriteLine("Product id:{0}\tProduct name:{1}\tPrice:{2}\tProduct Quantity:{3}\tWeight:{4}" +
                        "\tDimension:{5}", item.ProductID, item.Name, item.Price, item.StockQuantity, item.Weight, item.Dimensions);
                     }
                 }

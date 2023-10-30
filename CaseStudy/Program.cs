@@ -115,20 +115,20 @@ using System.Threading.Channels;
 
 
 Customers customers1 = new Customers();
-customers1.CustomerID = 1;
-customers1.CustomerName = "Anju Babu";
-customers1.CustomerEmail = "anju@ust";
+customers1.CustomerID = 10;
+customers1.CustomerName = "Ashwin Gopal";
+customers1.CustomerEmail = "ashwin@gmail.com";
 Customers.customers.Add(customers1);
 Customers customers2 = new Customers();
 customers2.CustomerID = 2;
-customers2.CustomerName = "devu s";
-customers2.CustomerEmail = "devu@ust";
+customers2.CustomerName = "Dev Surya";
+customers2.CustomerEmail = "devSurya@gmail.com";
 Customers.customers.Add(customers2);
-Customers customer13 = new Customers();
-customer13.CustomerID = 3;
-customer13.CustomerName = "Raman";
-customer13.CustomerEmail = "raman@ust";
-Customers.customers.Add(customer13);
+Customers customer3 = new Customers();
+customer3.CustomerID = 3;
+customer3.CustomerName = "Arun Kumar";
+customer3.CustomerEmail = "arun@gmail.com";
+Customers.customers.Add(customer3);
 
 while (true)
 {
@@ -136,7 +136,7 @@ while (true)
     int option = Convert.ToInt32(Console.ReadLine());
     if (option == 1)
     {
-        Console.WriteLine("Enter the customer id");
+        Console.WriteLine("enter customer id");
         int cusId = Convert.ToInt32(Console.ReadLine());
         if (Customers.customers.Find(x => x.CustomerID == cusId) == null)
         {
@@ -150,7 +150,7 @@ while (true)
 
             case 1:
 
-                Console.WriteLine("Enter Product id for add to cart");
+                Console.WriteLine("enter Product id for add to cart");
                 int productId = Convert.ToInt32(Console.ReadLine());
                 Customers customer1 = Customers.customers.Find(x => x.CustomerID == cusId);
                 if (DigitalProduct.Products.Find(x => x.ProductID == productId) == null)
@@ -162,20 +162,20 @@ while (true)
                     else
                     {
                         customer1.ordersphy.Add(PhysicalProduct.Products.Find(x => x.ProductID == productId));
-                        Console.WriteLine("product added to cart");
+                        Console.WriteLine("product successfully added to cart");
                     }
                 }
                 else
                 {
                     customer1.orders.Add(DigitalProduct.Products.Find(x => x.ProductID == productId));
-                    Console.WriteLine("product added to cart");
+                    Console.WriteLine("product successfully added to cart");
                 }
                 break;
             case 2:
-                Console.WriteLine("Products are");
+                Console.WriteLine("Products are:");
                 if (DigitalProduct.Products.Count == 0 && PhysicalProduct.Products.Count == 0)
                 {
-                    Console.WriteLine("No Product Found found");
+                    Console.WriteLine("No product found");
                 }
                 foreach (var item in DigitalProduct.Products)
                 {
@@ -193,7 +193,7 @@ while (true)
                 Customers customer = Customers.customers.Find(x => x.CustomerID == cusId);
                 if (customer.orders.Count == 0 && customer.ordersphy.Count == 0)
                 {
-                    Console.WriteLine("no product found in cart");
+                    Console.WriteLine("No product found in the cart");
                 }
                 else
                 {
@@ -214,7 +214,7 @@ while (true)
                         item.ProceesingPayment();
                         item.DeliveringProduct();
                     }
-                    Console.WriteLine("do you want to place all the order\n1.yes\n2.no");
+                    Console.WriteLine("Do you want to place all the orders\n1.yes\n2.no");
                     int confirm = Convert.ToInt32(Console.ReadLine());
                     if (confirm == 1)
                     {
@@ -222,11 +222,11 @@ while (true)
                         customer.orders.Clear();
                         customer.confirmedordersphy.AddRange(customer.ordersphy);
                         customer.ordersphy.Clear();
-                        Console.WriteLine("order placed successfully");
+                        Console.WriteLine("Order successfully placed");
                     }
                     else
                     {
-                        Console.WriteLine("removing everything in cart");
+                        Console.WriteLine("Removing all products from cart");
                     }
 
 
@@ -236,17 +236,17 @@ while (true)
 
                 break;
             case 4:
-                Console.WriteLine("call this number for support 987654321");
+                Console.WriteLine("call this number for support 080-3455643");
                 break;
             case 5:
                 Customers customer2 = Customers.customers.Find(x => x.CustomerID == cusId);
                 if (customer2.confirmedorders.Count == 0 && customer2.confirmedordersphy.Count == 0)
                 {
-                    Console.WriteLine("no order details found");
+                    Console.WriteLine("No order details found");
                 }
                 else
                 {
-                    Console.WriteLine("Orders are");
+                    Console.WriteLine("Orders are:");
                     foreach (var item in customer2.confirmedorders)
                     {
                         Console.WriteLine("Productid:{0}\tProduct Name:{1}\tPrice:{2}\tProduct Quantity:{3}\tFileFormat:{4}\tDownloadlink:{5}", item.ProductID,
@@ -260,12 +260,12 @@ while (true)
                 }
                 break;
             default:
-                Console.WriteLine("invalid input");
+                Console.WriteLine("Invalid input");
 
                 break;
         }
 
-        Console.WriteLine("do you want to continue as user\n1.yes\n2.no");
+        Console.WriteLine("Do you want to continue as user?\n1.yes\n2.no");
         int optUser = Convert.ToInt32(Console.ReadLine());
         if (optUser == 1)
         {
@@ -277,7 +277,7 @@ while (true)
         }
         else
         {
-            Console.WriteLine("invalid input");
+            Console.WriteLine("Invalid input");
         }
 
 
@@ -292,15 +292,15 @@ while (true)
             int optionProduct = Convert.ToInt32(Console.ReadLine());
             if (optionProduct == 1)
             {
-                Console.WriteLine("Enter Product id");
+                Console.WriteLine("enter product id");
                 int productid = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Enter Product Name");
+                Console.WriteLine("enter product name");
                 string? productName = Console.ReadLine();
                 Console.WriteLine("enter the price");
                 double productCost = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Enter the fileformat");
+                Console.WriteLine("enter the fileformat");
                 string? fileFormat = Console.ReadLine();
-                Console.WriteLine("Enter downloadLink");
+                Console.WriteLine("enter downloadLink");
                 string? downloadLink = Console.ReadLine();
 
 
@@ -314,15 +314,15 @@ while (true)
             }
             else if (optionProduct == 2)
             {
-                Console.WriteLine("Enter Product id");
+                Console.WriteLine("enter Product id");
                 int productid = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Enter Product Name");
+                Console.WriteLine("enter Product Name");
                 string? productName = Console.ReadLine();
                 Console.WriteLine("enter the price");
                 double productCost = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Enter the Weight");
+                Console.WriteLine("enter the Weight");
                 int weight = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Enter dimension");
+                Console.WriteLine("enter dimension");
                 string? dimension = Console.ReadLine();
 
                 PhysicalProduct physicalProduct = new PhysicalProduct();
@@ -342,9 +342,9 @@ while (true)
     }
     else
     {
-        Console.WriteLine("invalid option");
+        Console.WriteLine("Invalid option");
     }
-    Console.WriteLine("do you want to continue\n1.yes\n2.no");
+    Console.WriteLine("Do you want to continue?\n1.yes\n2.no");
     int opt = Convert.ToInt32(Console.ReadLine());
     if (opt == 1)
     {
@@ -356,7 +356,7 @@ while (true)
     }
     else
     {
-        Console.WriteLine("invalid input");
+        Console.WriteLine("Invalid input");
     }
 
 }

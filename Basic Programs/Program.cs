@@ -270,11 +270,29 @@ using static Basic_Programs.ExceptionMessages.MyExceptions;
 //fileOperation.FileProperties();
 
 
-GenericsExample<int> g1 = new GenericsExample<int>(10, 20);
-Console.WriteLine(g1.Val1 + " " +g1.Val2);
+//GenericsExample<int> g1 = new GenericsExample<int>(10, 20);
+//Console.WriteLine(g1.Val1 + " " +g1.Val2);
 
-GenericsExample<double> g2 = new GenericsExample<double>(23.56, 56.89);
-Console.WriteLine(g2.Val1 + " " +g2.Val2);
+//GenericsExample<double> g2 = new GenericsExample<double>(23.56, 56.89);
+//Console.WriteLine(g2.Val1 + " " +g2.Val2);
 
-GenericsExample<string> g3 = new GenericsExample<string>("AAA", "BBB");
-Console.WriteLine(g3.Val1 + " "+g3.Val2);
+//GenericsExample<string> g3 = new GenericsExample<string>("AAA", "BBB");
+//Console.WriteLine(g3.Val1 + " "+g3.Val2);
+
+//GenericsExample<int> generics=new GenericsExample<int>(new int[3] {1,2,3});
+//generics.Display();
+
+static void Swap<T>(ref T num1, ref T num2)
+{
+    T temp;
+    temp = num1;
+    num1 = num2;
+    num2 = temp;
+
+}
+int n1 = 40, n2 = 60;
+char c1= 'a',c2='b';
+Swap<int>(ref n1,ref n2);
+Swap<char>(ref c1,ref c2);
+Console.WriteLine("n1={0},n2={1}",n1,n2);
+Console.WriteLine("c1={0},c2={1}", c1, c2);

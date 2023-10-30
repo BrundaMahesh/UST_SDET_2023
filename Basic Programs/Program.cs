@@ -261,11 +261,20 @@ using static Basic_Programs.ExceptionMessages.MyExceptions;
 //    Console.WriteLine("Done");
 //}
 
-
-FileOperation fileOperation = new FileOperation();
+//FileOperation fileOperation = new FileOperation();
 //fileOperation.CreateFile();
 //fileOperation.WriteData();
 //fileOperation.ReadData();
 //fileOperation.CopyMoveFile();
 //fileOperation.DeleteFile();
-fileOperation.FileProperties();
+//fileOperation.FileProperties();
+
+
+GenericsExample<int> g1 = new GenericsExample<int>(10, 20);
+Console.WriteLine(g1.Val1 + " " +g1.Val2);
+
+GenericsExample<double> g2 = new GenericsExample<double>(23.56, 56.89);
+Console.WriteLine(g2.Val1 + " " +g2.Val2);
+
+GenericsExample<string> g3 = new GenericsExample<string>("AAA", "BBB");
+Console.WriteLine(g3.Val1 + " "+g3.Val2);

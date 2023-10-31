@@ -234,31 +234,59 @@ using static Assignments.ExceptionMessages.MyException;
 
 
 //30/10/2023
-Console.WriteLine("*****Room reservation system*****\n");
-Console.Write("enter room number:");
-int roomNumber=Convert.ToInt32(Console.ReadLine());
-Console.Write("enter room type(Single/Double):");
-string? roomType=Console.ReadLine();
-HotelRoom hotelRoom=new HotelRoom(roomNumber, roomType,true);
-RoomReservation<HotelRoom> roomReservation = new RoomReservation<HotelRoom>();
-roomReservation.BookRoom(hotelRoom);
-Console.WriteLine("\nDetails of room:");
-foreach (var item in RoomReservation<HotelRoom>.reservationList)
-{
-    Console.WriteLine("Room number:"+roomNumber +"\n"+ "Room type:"+roomType);
-}
-Console.Write("\nenter room number:");
-int roomNumber1 = Convert.ToInt32(Console.ReadLine());
-HotelRoom found=RoomReservation<HotelRoom>.reservationList.Find(x=> x.RoomNumber == roomNumber1);
-if(found==null)
-{
-    Console.WriteLine("No room found to cancel");
-}
-else
-{
-    roomReservation.CancelRoom(found);
-}
+//Console.WriteLine("*****Room reservation system*****\n");
+//Console.Write("enter room number:");
+//int roomNumber=Convert.ToInt32(Console.ReadLine());
+//Console.Write("enter room type(Single/Double):");
+//string? roomType=Console.ReadLine();
+//HotelRoom hotelRoom=new HotelRoom(roomNumber, roomType,true);
+//RoomReservation<HotelRoom> roomReservation = new RoomReservation<HotelRoom>();
+//roomReservation.BookRoom(hotelRoom);
+//Console.WriteLine("\nDetails of room:");
+//foreach (var item in RoomReservation<HotelRoom>.reservationList)
+//{
+//    Console.WriteLine("Room number:"+roomNumber +"\n"+ "Room type:"+roomType);
+//}
+//Console.Write("\nenter room number:");
+//int roomNumber1 = Convert.ToInt32(Console.ReadLine());
+//HotelRoom found=RoomReservation<HotelRoom>.reservationList.Find(x=> x.RoomNumber == roomNumber1);
+//if(found==null)
+//{
+//    Console.WriteLine("No room found to cancel");
+//}
+//else
+//{
+//    roomReservation.CancelRoom(found);
 
+
+
+//31/10/2023
+Console.WriteLine("enter employee id:");
+int id=Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("enter employee name:");
+string? name=Console.ReadLine();
+Console.WriteLine("enter performane rating(1to5):");
+int rating=Convert.ToInt32(Console.ReadLine());
+Employees employees=new Employees(id, name, rating);
+employees.AddEmployee(employees);
+
+Console.WriteLine("Choose option for bonus calculation:1.Performance threshold\n2.Department Specific\n3.Exit");
+int option=Convert.ToInt32(Console.ReadLine());
+switch(option)
+{
+    case 1:
+        employees.PerformanceBasedBonus(employees);
+        break;
+    case 2:
+        employees.DepartmentSpecificBonus(employees);
+        break;
+    case 3:
+        Environment.Exit(0);
+        break;
+    default:
+        Console.WriteLine("Invalid choice");
+        break;
+}
 
 
 

@@ -299,12 +299,23 @@ using static Basic_Programs.ExceptionMessages.MyExceptions;
 
 
 public delegate void Delegate1(string message);
+public delegate void Delegate2(int num1,int num2);
 class Program
 {
     public static void Main(string[] args)
     {
         Delegate1 delegate1 = DelegateExample.MethodA;
         delegate1("HIII");
+
+        DelegateExample delegateExample = new();
+
+        Delegate2 delegate2 = delegateExample.Add;
+        delegate2(10, 20);
+
+        Delegate2 delegate21 = delegateExample.Subtract;
+        delegate21(10,20);
+      
+
     }
 }
 

@@ -261,34 +261,43 @@ using static Assignments.ExceptionMessages.MyException;
 
 
 //31/10/2023
-public delegate decimal BonusCalculation(Employees employees);
-
-Console.Write("enter employee id:");
-int id=Convert.ToInt32(Console.ReadLine());
-Console.Write("enter employee name:");
-string? name=Console.ReadLine();
-Console.Write("enter performane rating(1to5):");
-int rating=Convert.ToInt32(Console.ReadLine());
-Employees employees=new Employees(id, name, rating);
-employees.AddEmployee(employees);
-
-Console.Write("\nChoose option for bonus calculation:\n1.Performance threshold\n2.Department Specific\n3.Exit\n");
-int option=Convert.ToInt32(Console.ReadLine());
-switch(option)
+class Program
 {
-    case 1:
-        BonusCalculation bonusCalculation = employees.PerformanceBasedBonus;
+    public delegate decimal BonusCalculation(Employees employees);
 
-        break;
-    case 2:
-        employees.DepartmentSpecificBonus(employees);
-        break;
-    case 3:
-        Environment.Exit(0);
-        break;
-    default:
-        Console.WriteLine("Invalid choice");
-        break;
+    public static void Main(string[] args)
+    {
+
+        Console.Write("enter employee id:");
+        int id = Convert.ToInt32(Console.ReadLine());
+        Console.Write("enter employee name:");
+        string? name = Console.ReadLine();
+        Console.Write("enter performane rating(1to5):");
+        int rating = Convert.ToInt32(Console.ReadLine());
+        Employees employees = new Employees(id, name, rating);
+        employees.AddEmployee(employees);
+
+        Console.Write("\nChoose option for bonus calculation:\n1.Performance threshold\n2.Department Specific\n3.Exit\n");
+        int option = Convert.ToInt32(Console.ReadLine());
+        switch (option)
+        {
+            case 1:
+                BonusCalculation bonusCalculation = employees.PerformanceBasedBonus;
+                Console.WriteLine("Bonus:"+bonusCalculation(employees));
+                break;
+            case 2:
+                BonusCalculation bonusCalculation1 = employees.DepartmentSpecificBonus;
+                Console.WriteLine("Bonus:" + bonusCalculation1(employees));
+                break;
+            case 3:
+                Environment.Exit(0);
+                break;
+            default:
+                Console.WriteLine("Invalid choice");
+                break;
+        }
+
+    }
 }
 
 

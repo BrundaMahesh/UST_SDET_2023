@@ -300,6 +300,7 @@ using static Basic_Programs.ExceptionMessages.MyExceptions;
 
 public delegate void Delegate1(string message);
 public delegate void Delegate2(int num1,int num2);
+public delegate int Delegate3(int num1, int num2);
 class Program
 {
     public static void Main(string[] args)
@@ -314,8 +315,15 @@ class Program
 
         Delegate2 delegate21 = delegateExample.Subtract;
         delegate21(10,20);
-      
 
+        Delegate3 delegate3 = delegateExample.AddWithReturn;
+        Console.WriteLine(); delegate3(10,20);
+
+
+        //Multicast delegates
+        Console.WriteLine("Multicast delegate");
+        Delegate2 all = delegate2 + delegate21;
+        all(1, 2);
     }
 }
 

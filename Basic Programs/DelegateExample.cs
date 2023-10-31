@@ -17,6 +17,12 @@ namespace Basic_Programs
             Num2=num2;
             Console.WriteLine(Num1+Num2);
         }
+        public int AddWithReturn(int num1, int num2)
+        {
+            Num1 = num1;
+            Num2 = num2;
+           return Num1+Num2;
+        }
         public void Subtract(int num1, int num2)
         {
             Num1 = num1;

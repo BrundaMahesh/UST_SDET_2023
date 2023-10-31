@@ -40,5 +40,20 @@ namespace Assignments
                 return employees.PerformanceRating*1000;
             }
         }
+        public decimal DepartmentSpecificBonus(Employees employees)
+        {
+            if (employees.PerformanceRating >= 4)
+            {
+                return employees.PerformanceRating * 4000;
+            }
+            else if (employees.PerformanceRating >= 3)
+            {
+                return employees.PerformanceRating * 3000;
+            }
+            else
+            {
+                return employees.PerformanceRating * 1000;
+            }
+        }
     }
 }

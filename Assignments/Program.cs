@@ -261,21 +261,24 @@ using static Assignments.ExceptionMessages.MyException;
 
 
 //31/10/2023
-Console.WriteLine("enter employee id:");
+public delegate decimal BonusCalculation(Employees employees);
+
+Console.Write("enter employee id:");
 int id=Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("enter employee name:");
+Console.Write("enter employee name:");
 string? name=Console.ReadLine();
-Console.WriteLine("enter performane rating(1to5):");
+Console.Write("enter performane rating(1to5):");
 int rating=Convert.ToInt32(Console.ReadLine());
 Employees employees=new Employees(id, name, rating);
 employees.AddEmployee(employees);
 
-Console.WriteLine("Choose option for bonus calculation:1.Performance threshold\n2.Department Specific\n3.Exit");
+Console.Write("\nChoose option for bonus calculation:\n1.Performance threshold\n2.Department Specific\n3.Exit\n");
 int option=Convert.ToInt32(Console.ReadLine());
 switch(option)
 {
     case 1:
-        employees.PerformanceBasedBonus(employees);
+        BonusCalculation bonusCalculation = employees.PerformanceBasedBonus;
+
         break;
     case 2:
         employees.DepartmentSpecificBonus(employees);

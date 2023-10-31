@@ -282,17 +282,31 @@ using static Basic_Programs.ExceptionMessages.MyExceptions;
 //GenericsExample<int> generics=new GenericsExample<int>(new int[3] {1,2,3});
 //generics.Display();
 
-static void Swap<T>(ref T num1, ref T num2)
-{
-    T temp;
-    temp = num1;
-    num1 = num2;
-    num2 = temp;
+//static void Swap<T>(ref T num1, ref T num2)
+//{
+//    T temp;
+//    temp = num1;
+//    num1 = num2;
+//    num2 = temp;
 
+//}
+//int n1 = 40, n2 = 60;
+//char c1= 'a',c2='b';
+//Swap<int>(ref n1,ref n2);
+//Swap<char>(ref c1,ref c2);
+//Console.WriteLine("n1={0},n2={1}",n1,n2);
+//Console.WriteLine("c1={0},c2={1}", c1, c2);
+
+
+public delegate void Delegate1(string message);
+class Program
+{
+    public static void Main(string[] args)
+    {
+        Delegate1 delegate1 = DelegateExample.MethodA;
+        delegate1("HIII");
+    }
 }
-int n1 = 40, n2 = 60;
-char c1= 'a',c2='b';
-Swap<int>(ref n1,ref n2);
-Swap<char>(ref c1,ref c2);
-Console.WriteLine("n1={0},n2={1}",n1,n2);
-Console.WriteLine("c1={0},c2={1}", c1, c2);
+
+
+

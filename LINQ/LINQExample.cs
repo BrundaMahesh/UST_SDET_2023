@@ -83,5 +83,41 @@ namespace LINQ
                 Console.WriteLine("String:"+item);
             }
         }
+
+        public void SortOrderBy()
+        {
+            List<Student> students = new List<Student>();
+            students.Add(new Student(1, "Anu", "CS"));
+            students.Add(new Student(2, "Sanju", "IT"));
+            students.Add(new Student(3, "Lohith", "ISE"));
+            students.Add(new Student(4, "Surya", "EC"));
+
+            var result=students.OrderByDescending(x=>x.Name).ThenBy(x=>x.Department);
+            foreach (var item in result)
+            {
+                Console.WriteLine(item.Name +" "+item.Department);
+            }
+        }
+
+        public void Grouping()
+        {
+            List<Student> students = new List<Student>();
+            students.Add(new Student(1, "Anu", "CS"));
+            students.Add(new Student(2, "Sanju", "IT"));
+            students.Add(new Student(3, "Lohith", "ISE"));
+            students.Add(new Student(4, "Surya", "EC"));
+
+            var result = students.ToLookup(s => s.Department);
+            foreach (var item in result)
+            {
+                Console.WriteLine(item.Key);
+                foreach (var item1 in item)
+                {
+                    Console.WriteLine(item1.Name+""+item1.Department);
+
+                }
+
+            }
+        }
     }
 }

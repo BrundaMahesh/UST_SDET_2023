@@ -321,7 +321,26 @@ using static Assignments.ExceptionMessages.MyException;
 
 
 //01/11/2023
-TourismDestination.Sorting();
+//TourismDestination tourism1 = new TourismDestination("Batu Caves", "Malaysia", 4);
+//TourismDestination tourism2 = new TourismDestination("Taj Mahal", "India", 2);
+//TourismDestination tourism3 = new TourismDestination("Marina Bay", "Singapore", 3);
+//TourismDestination.tourismDestinations.Add(tourism1);
+//TourismDestination.tourismDestinations.Add(tourism2);
+//TourismDestination.tourismDestinations.Add(tourism3);
+//TourismDestination.SortingBasedOnRating();
+
+
+TourismDestination1 tourism1 = new TourismDestination1("Ooty", "Tamilnadu", 4, 2500);
+TourismDestination1 tourism2 = new TourismDestination1("Yaana", "Karnataka", 2, 5000);
+TourismDestination1 tourism3 = new TourismDestination1("Varkala", "Kerala", 3, 4000);
+TourismDestination1 tourism4 = new TourismDestination1("Ramoji Film City", "Hyderabad", 5, 6000);
+
+TourismDestination1.tourismDestination1s.Add(tourism1);
+TourismDestination1.tourismDestination1s.Add(tourism2);
+TourismDestination1.tourismDestination1s.Add(tourism3);
+TourismDestination1.tourismDestination1s.Add(tourism4);
+TourismDestination1.QueryMethod();
+
 
 
 

@@ -1,4 +1,5 @@
 ﻿using LINQ;
 
 LINQExample lINQExample = new LINQExample();
-lINQExample.Display();
+//lINQExample.Display();
+lINQExample.StudentDisplay();

@@ -38,5 +38,21 @@ namespace LINQ
             }
         }
 
+        public void StudentDisplay()
+        {
+            List<Student> students = new List<Student>();
+            students.Add(new Student(1, "Anu", "CS"));
+            students.Add(new Student(2, "Sanju", "IT"));
+            students.Add(new Student(3, "Lohith", "ISE"));
+            students.Add(new Student(4, "Surya", "EC"));
+
+            var student = students.Where(s => s.Id == 2);
+            foreach (var item in student)
+            {
+                Console.WriteLine(item.Id +" " +item.Name +" "+item.Department);
+
+            }
+
+        }
     }
 }

@@ -27,7 +27,7 @@ namespace Assignments
             var topRated = tourismDestination1s.FindAll(x => x.Rating >= 4);
             if(topRated!=null)
             {
-                Console.WriteLine("Top rated destination details:\n");
+                Console.WriteLine("Top rated destination details(rating>=4):\n");
                 foreach (var item in topRated)
                 {
                     Console.WriteLine("Name:" + item.Name + " " + "Location:"+item.Location+" "+"Rating:"+item.Rating+" "+"Price per night:"+item.PricePerNight);
@@ -47,7 +47,7 @@ namespace Assignments
             }
 
             var location1 = tourismDestination1s.FindAll(x=>x.Location=="Kerala");
-            Console.WriteLine("\nFinding destination based on location:\n");
+            Console.WriteLine("\nFinding destination based on location(location=kerala):\n");
             foreach (var item in location1)
             {
                 Console.WriteLine("Name:" + item.Name + " " + "Location:" + item.Location + " " + "Rating:" + item.Rating + " " + "Price per night:" + item.PricePerNight);

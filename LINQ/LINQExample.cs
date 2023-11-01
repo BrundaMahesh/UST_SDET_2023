@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,13 +47,41 @@ namespace LINQ
             students.Add(new Student(3, "Lohith", "ISE"));
             students.Add(new Student(4, "Surya", "EC"));
 
-            var student = students.Where(s => s.Id == 2);
+            Student student1 = (Student)students.FirstOrDefault(s => s.Id == 3);
+            if (student1 != null)
+            {
+                Console.WriteLine(student1.Id + " " + student1.Name + " " + student1.Department);
+            }
+            else
+            {
+                Console.WriteLine("Student not found");
+            }
+            List<Student> student = (List<Student>)students.FindAll(s => s.Name == "Surya" || s.Name=="Sanju");
             foreach (var item in student)
             {
                 Console.WriteLine(item.Id +" " +item.Name +" "+item.Department);
 
             }
+        }
+        public void FilteringOfType()
+        {
+            ArrayList arrayList = new ArrayList();
+            arrayList.Add(1);
+            arrayList.Add(2);
+            arrayList.Add("Three");
+            arrayList.Add("Four");
 
+            var numbers=arrayList.OfType<int>();
+            var strings=arrayList.OfType<string>();
+
+            foreach (int item in numbers)
+            {
+                Console.WriteLine("Integer:"+item);
+            }
+            foreach (string item in strings)
+            {
+                Console.WriteLine("String:"+item);
+            }
         }
     }
 }

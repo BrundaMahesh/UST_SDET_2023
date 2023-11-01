@@ -2,4 +2,5 @@
 
 LINQExample lINQExample = new LINQExample();
 //lINQExample.Display();
-lINQExample.StudentDisplay();
+//lINQExample.StudentDisplay();
+lINQExample.FilteringOfType();

@@ -300,23 +300,28 @@ using static Assignments.ExceptionMessages.MyException;
 //    }
 //}
 
-class Program
-{
-    public delegate string EventNotification(string message);
-    public static void Main(string[] args)
-    {
-        HotelEvent hotelEvent = new HotelEvent("Live concert", "23/11/2023", "Mumbai", 50);
-        EventNotification eventNotification = HotelEvent.EventRegistration;
-        if(eventNotification == null )
-        {
-            Console.WriteLine(eventNotification("Not registered"));
-        }
-        else
-        {
-            Console.WriteLine(eventNotification($"Event {hotelEvent.EventName} is registered successfully for date {hotelEvent.EventDate}"));
-        }
-    }
-}
+//class Program
+//{
+//    public delegate string EventNotification(string message);
+//    public static void Main(string[] args)
+//    {
+//        HotelEvent hotelEvent = new HotelEvent("Live concert", "23/11/2023", "Mumbai", 50);
+//        EventNotification eventNotification = HotelEvent.EventRegistration;
+//        if(eventNotification == null )
+//        {
+//            Console.WriteLine(eventNotification("Not registered"));
+//        }
+//        else
+//        {
+//            Console.WriteLine(eventNotification($"Event {hotelEvent.EventName} is registered successfully for date {hotelEvent.EventDate}"));
+//        }
+//    }
+//}
+
+
+
+//01/11/2023
+TourismDestination.Sorting();
 
 
 

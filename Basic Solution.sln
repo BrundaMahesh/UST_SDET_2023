@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basic Programs", "Basic Pro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignments", "Assignments\Assignments.csproj", "{26D5853A-7169-4BBF-AFF5-72ACAC83EBAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseStudy", "CaseStudy\CaseStudy.csproj", "{3824648D-BBF9-4274-9722-B7ADDBB28871}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaseStudy", "CaseStudy\CaseStudy.csproj", "{3824648D-BBF9-4274-9722-B7ADDBB28871}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{19B589FA-524C-4FE0-8866-45A06E80C02A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{3824648D-BBF9-4274-9722-B7ADDBB28871}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3824648D-BBF9-4274-9722-B7ADDBB28871}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3824648D-BBF9-4274-9722-B7ADDBB28871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19B589FA-524C-4FE0-8866-45A06E80C02A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19B589FA-524C-4FE0-8866-45A06E80C02A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19B589FA-524C-4FE0-8866-45A06E80C02A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19B589FA-524C-4FE0-8866-45A06E80C02A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

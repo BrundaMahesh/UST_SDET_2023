@@ -38,3 +38,20 @@ using ThreadsExample;
 
 
 CourseRegistration courseRegistration = new CourseRegistration();
+int numberOfStudents = 5;
+
+List<Thread> studentThreads= new List<Thread>();
+for (int i = 1; i <= numberOfStudents; i++)
+{
+    string studentName = $"Student{i}";
+    Thread studentThread= new 
+        Thread(()=>courseRegistration.RegisterStudent(studentName));
+    studentThreads.Add(studentThread);
+    studentThread.Start();
+
+}
+foreach (Thread thread in studentThreads)
+{
+    thread.Join();
+}
+Console.WriteLine($"Course registration completed. Total registered students:{courseRegistration.GetRegisteredStudentCount()}");

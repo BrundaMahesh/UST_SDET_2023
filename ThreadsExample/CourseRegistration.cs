@@ -18,5 +18,13 @@ namespace ThreadsExample
                 Console.WriteLine($"{studentName} has registered for the course.");
             }
         }
+
+        public int GetRegisteredStudentCount()
+        {
+            lock (registeredStudents)
+            {
+                return registeredStudents.Count;
+            }
+        }
     }
 }

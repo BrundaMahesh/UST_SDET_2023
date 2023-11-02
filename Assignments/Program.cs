@@ -1,6 +1,7 @@
 ﻿using Assignments;
 using Assignments.ExceptionMessages;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using static Assignments.ExceptionMessages.MyException;
 //18/10/2023           
 //Student student = new Student("RajKumar", 50, 80, 40);
@@ -320,7 +321,7 @@ using static Assignments.ExceptionMessages.MyException;
 
 
 
-//01/11/2023
+
 //TourismDestination tourism1 = new TourismDestination("Batu Caves", "Malaysia", 4);
 //TourismDestination tourism2 = new TourismDestination("Taj Mahal", "India", 2);
 //TourismDestination tourism3 = new TourismDestination("Marina Bay", "Singapore", 3);
@@ -330,16 +331,38 @@ using static Assignments.ExceptionMessages.MyException;
 //TourismDestination.SortingBasedOnRating();
 
 
-TourismDestination1 tourism1 = new TourismDestination1("Ooty", "Tamilnadu", 4, 2500);
-TourismDestination1 tourism2 = new TourismDestination1("Yaana", "Karnataka", 2, 5000);
-TourismDestination1 tourism3 = new TourismDestination1("Varkala", "Kerala", 3, 4000);
-TourismDestination1 tourism4 = new TourismDestination1("Ramoji Film City", "Hyderabad", 5, 6000);
+//TourismDestination1 tourism1 = new TourismDestination1("Ooty", "Tamilnadu", 4, 2500);
+//TourismDestination1 tourism2 = new TourismDestination1("Yaana", "Karnataka", 2, 5000);
+//TourismDestination1 tourism3 = new TourismDestination1("Varkala", "Kerala", 3, 4000);
+//TourismDestination1 tourism4 = new TourismDestination1("Ramoji Film City", "Hyderabad", 5, 6000);
 
-TourismDestination1.tourismDestination1s.Add(tourism1);
-TourismDestination1.tourismDestination1s.Add(tourism2);
-TourismDestination1.tourismDestination1s.Add(tourism3);
-TourismDestination1.tourismDestination1s.Add(tourism4);
-TourismDestination1.QueryMethod();
+//TourismDestination1.tourismDestination1s.Add(tourism1);
+//TourismDestination1.tourismDestination1s.Add(tourism2);
+//TourismDestination1.tourismDestination1s.Add(tourism3);
+//TourismDestination1.tourismDestination1s.Add(tourism4);
+//TourismDestination1.QueryMethod();
+
+
+
+//01/11/2023
+
+class Program
+{
+   
+    static async Task Main(string[] args)
+    {
+
+        Hotel hotel1 = new Hotel("Ooty", "Tamilnadu", 4,2500, "Ginger", 15);
+        Hotel hotel2 = new Hotel("Yaana", "Karnataka", 2, 5000,"Amigooz",30);
+        Hotel hotel3 = new Hotel("Varkala", "Kerala", 3, 4000,"Flamingoo",20);
+
+        await hotel1.BookRooms(1, "Ginger");
+        await hotel2.BookRooms(10, "Amigooz");
+        await hotel3.BookRooms(6, "Flamingoo");
+
+    }
+    
+}
 
 
 

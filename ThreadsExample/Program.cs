@@ -23,15 +23,18 @@
 
 using ThreadsExample;
 
-Warehouse warehouse = new Warehouse();
+//Warehouse warehouse = new Warehouse();
 
-Thread worker1 = new Thread(() => warehouse.AddBox(1));
-Thread worker2 = new Thread(() => warehouse.AddBox(2));
+//Thread worker1 = new Thread(() => warehouse.AddBox(1));
+//Thread worker2 = new Thread(() => warehouse.AddBox(2));
 
-worker1.Start();
-worker2.Start();
+//worker1.Start();
+//worker2.Start();
 
-worker1.Join();
-worker2.Join();
+//worker1.Join();
+//worker2.Join();
 
-Console.WriteLine("Work completed. Total boxes in the warehouse: " + warehouse.GetTotalBoxes());
+//Console.WriteLine("Work completed. Total boxes in the warehouse: " + warehouse.GetTotalBoxes());
+
+
+CourseRegistration courseRegistration = new CourseRegistration();

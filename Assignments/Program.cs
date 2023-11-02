@@ -346,23 +346,37 @@ using static Assignments.ExceptionMessages.MyException;
 
 //01/11/2023
 
-class Program
-{
-   
-    static async Task Main(string[] args)
-    {
+//class Program
+//{
 
-        Hotel hotel1 = new Hotel("Ooty", "Tamilnadu", 4,2500, "Ginger", 15);
-        Hotel hotel2 = new Hotel("Yaana", "Karnataka", 2, 5000,"Amigooz",30);
-        Hotel hotel3 = new Hotel("Varkala", "Kerala", 3, 4000,"Flamingoo",20);
+//    static async Task Main(string[] args)
+//    {
 
-        await hotel1.BookRooms(16, "Ginger");
-        await hotel2.BookRooms(10, "Amigooz");
-        await hotel3.BookRooms(6, "Flamingoo");
+//        Hotel hotel1 = new Hotel("Ooty", "Tamilnadu", 4,2500, "Ginger", 15);
+//        Hotel hotel2 = new Hotel("Yaana", "Karnataka", 2, 5000,"Amigooz",30);
+//        Hotel hotel3 = new Hotel("Varkala", "Kerala", 3, 4000,"Flamingoo",20);
 
-    }
-    
-}
+//        await hotel1.BookRooms(16, "Ginger");
+//        await hotel2.BookRooms(10, "Amigooz");
+//        await hotel3.BookRooms(6, "Flamingoo");
+
+//    }
+
+//}
+
+
+TourPackage tour1 = new TourPackage(23, "Kodikanal", "25/11/2023", 3400);
+TourPackage tour2 = new TourPackage(24, "Munnar", "22/12/2023", 4000);
+
+TourPackage.tourPackages.Add(tour1);
+TourPackage.tourPackages.Add(tour2);
+
+Thread thread = new Thread(TourPackage.ReservePackage);
+Thread thread1 = new Thread(TourPackage.ReservePackage);
+thread1.Start();
+thread1.Join();
+thread.Start();
+
 
 
 

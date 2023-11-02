@@ -25,11 +25,11 @@ namespace Assignments
                 Console.WriteLine($"Booking hotel {HotelName}.....");
                 await Task.Delay(3000);
                 AvailableRooms = AvailableRooms - requestedRoom;
-                Console.WriteLine($"Booking confirmed: booked {requestedRoom} rooms in {HotelName}");
+                Console.WriteLine($"Booking confirmed: booked {requestedRoom} rooms in {HotelName} hotel.");
             }
             else
             {
-                Console.WriteLine($"Sorry, insufficient rooms availabile in {HotelName}");
+                Console.WriteLine($"Sorry, insufficient rooms availabile in {HotelName} hotel");
 
             }
             Console.WriteLine($"Current availability in {HotelName}: {AvailableRooms} rooms\n.");

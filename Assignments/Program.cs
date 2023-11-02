@@ -365,20 +365,20 @@ using static Assignments.ExceptionMessages.MyException;
 //}
 
 
-TourPackage tour1 = new TourPackage(23, "Kodikanal", "25/11/2023", 3400);
-TourPackage tour2 = new TourPackage(24, "Munnar", "22/12/2023", 4000);
+//TourPackage tour1 = new TourPackage(23, "Kodikanal", "25/11/2023", 3400);
+//TourPackage tour2 = new TourPackage(24, "Munnar", "22/12/2023", 4000);
 
-TourPackage.tourPackages.Add(tour1);
-TourPackage.tourPackages.Add(tour2);
+//TourPackage.tourPackages.Add(tour1);
+//TourPackage.tourPackages.Add(tour2);
 
-Thread thread = new Thread(TourPackage.ReservePackage);
-Thread thread1 = new Thread(TourPackage.ReservePackage);
-thread1.Start();
-thread1.Join();
-thread.Start();
+//Thread thread = new Thread(TourPackage.ReservePackage);
+//Thread thread1 = new Thread(TourPackage.ReservePackage);
+//thread1.Start();
+//thread1.Join();
+//thread.Start();
 
 
-
+//03/11/2023
 
 
 

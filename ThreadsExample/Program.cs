@@ -21,7 +21,7 @@
 //}
 
 
-using ThreadsExample;
+//using ThreadsExample;
 
 //Warehouse warehouse = new Warehouse();
 
@@ -37,21 +37,78 @@ using ThreadsExample;
 //Console.WriteLine("Work completed. Total boxes in the warehouse: " + warehouse.GetTotalBoxes());
 
 
-CourseRegistration courseRegistration = new CourseRegistration();
-int numberOfStudents = 5;
 
-List<Thread> studentThreads= new List<Thread>();
-for (int i = 1; i <= numberOfStudents; i++)
-{
-    string studentName = $"Student{i}";
-    Thread studentThread= new 
-        Thread(()=>courseRegistration.RegisterStudent(studentName));
-    studentThreads.Add(studentThread);
-    studentThread.Start();
+//CourseRegistration courseRegistration = new CourseRegistration();
+//int numberOfStudents = 5;
 
-}
-foreach (Thread thread in studentThreads)
+//List<Thread> studentThreads= new List<Thread>();
+//for (int i = 1; i <= numberOfStudents; i++)
+//{
+//    string studentName = $"Student{i}";
+//    Thread studentThread= new 
+//        Thread(()=>courseRegistration.RegisterStudent(studentName));
+//    studentThreads.Add(studentThread);
+//    studentThread.Start();
+
+//}
+//foreach (Thread thread in studentThreads)
+//{
+//    thread.Join();
+//}
+//Console.WriteLine($"Course registration completed. Total registered students:{courseRegistration.GetRegisteredStudentCount()}");
+
+//class Programs
+//{
+//    static async Task Main()
+//    {
+//        Console.WriteLine("Starting asynchronous operation...");
+//        await PerformAsyncOperation();
+//        Console.WriteLine("Asynchronous operation completed.");
+//    }
+//    static async Task PerformAsyncOperation()
+//    {
+//        await Task.Delay(2000);
+//        Console.WriteLine("Async operation completed.");
+
+//    }
+//}
+
+
+
+using System;
+
+class Program
 {
-    thread.Join();
+    static async Task Main()
+    {
+        List<string> urls = new List<string>
+        {
+            "https://www.google.com",
+             "https://www.microsoft.com",
+              "https://www.yahoo.com",
+
+        };
+        Console.WriteLine("Downloading web pages asynchronously...");
+        List<Task<string>> tasks = new List<Task<string>>();
+        foreach (string url in urls)
+        {
+            tasks.Add(DownloadWebPageAsync(url));
+        }
+        await Task.WhenAll(tasks);
+        foreach (Task<string> task in tasks)
+        {
+            string content = await task;
+            Console.WriteLine($"Downloaded {content.Length} bytes from a web page");
+        }
+    }
+
+    static async Task<string>DownloadWebPageAsync(string url)
+    {
+        using(HttpClient client = new HttpClient())
+        {
+            string content = await client.GetStringAsync(url);
+            return content;
+        }
+    }
 }
-Console.WriteLine($"Course registration completed. Total registered students:{courseRegistration.GetRegisteredStudentCount()}");
+

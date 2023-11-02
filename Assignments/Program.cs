@@ -356,7 +356,7 @@ class Program
         Hotel hotel2 = new Hotel("Yaana", "Karnataka", 2, 5000,"Amigooz",30);
         Hotel hotel3 = new Hotel("Varkala", "Kerala", 3, 4000,"Flamingoo",20);
 
-        await hotel1.BookRooms(1, "Ginger");
+        await hotel1.BookRooms(16, "Ginger");
         await hotel2.BookRooms(10, "Amigooz");
         await hotel3.BookRooms(6, "Flamingoo");
 

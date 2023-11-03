@@ -382,7 +382,7 @@ using static Assignments.ExceptionMessages.MyException;
 TaskItem task=new TaskItem();
 while(true)
 {
-    Console.WriteLine("*****To-Do List*****");
+    Console.WriteLine("\n*****To-Do List*****");
     Console.WriteLine("1.Add task");
     Console.WriteLine("2.Remove task");
     Console.WriteLine("3.Mark task as completed");
@@ -397,10 +397,10 @@ while(true)
     {
         case 1:
             Console.Write("enter task id:");
-            int taskID=Convert.ToInt32(Console.ReadLine());
+            task.TaskID=Convert.ToInt32(Console.ReadLine());
             Console.Write("enter task description:");
-            string? description=Console.ReadLine();
-            task.AddTask(taskID,description,false);
+            task.TaskDescription=Console.ReadLine();
+            task.AddTask(task);
             break;
 
         case 2:

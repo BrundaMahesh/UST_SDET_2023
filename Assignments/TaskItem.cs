@@ -13,10 +13,11 @@ namespace Assignments
         public bool IsCompleted {  get; set; }
         public static List<TaskItem> taskItems = new List<TaskItem>();
 
+      
 
-        public void AddTask(int taskID,string? taskDescription,bool isCompleted)
+        public void AddTask(TaskItem item)
         {
-           taskItems.Add(new TaskItem(TaskID=taskID, TaskDescription=taskDescription, IsCompleted=isCompleted));
+           taskItems.Add(item);
         }
 
         public void RemoveTask(int taskID)
@@ -72,6 +73,10 @@ namespace Assignments
                 if (!item.IsCompleted)
                 {
                     Console.WriteLine($"Task ID:{item.TaskID}, Task Description:{item.TaskDescription}");
+                }
+                else
+                {
+                    Console.WriteLine("No pending tasks");
                 }
             }
         }

@@ -8,9 +8,19 @@ namespace Assignments
 {
     internal class FamilyMember
     {
+        public FamilyMember(string? name, int age)
+        {
+            Name = name;
+            Age = age;
+            children= new List<FamilyMember>();
+        }
+
         public string? Name { get; set; }    
         public int Age { get; set; }
-        public static List<FamilyMember> Children { get; set;}
+        public List<FamilyMember> children { get; set;}
+
+       
+        
 
 
 

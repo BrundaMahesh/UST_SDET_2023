@@ -379,62 +379,73 @@ using static Assignments.ExceptionMessages.MyException;
 
 
 //03/11/2023
-TaskItem task=new TaskItem();
-while(true)
-{
-    Console.WriteLine("\n*****To-Do List*****");
-    Console.WriteLine("1.Add task");
-    Console.WriteLine("2.Remove task");
-    Console.WriteLine("3.Mark task as completed");
-    Console.WriteLine("4.Display task");
-    Console.WriteLine("5.Filter completed task");
-    Console.WriteLine("6.Filter pending task");
-    Console.WriteLine("7.Exit");
-    Console.Write("enter your choice:");
-    int choice=Convert.ToInt32(Console.ReadLine()); 
+//TaskItem task=new TaskItem();
+//while(true)
+//{
+//    Console.WriteLine("\n*****To-Do List*****");
+//    Console.WriteLine("1.Add task");
+//    Console.WriteLine("2.Remove task");
+//    Console.WriteLine("3.Mark task as completed");
+//    Console.WriteLine("4.Display task");
+//    Console.WriteLine("5.Filter completed task");
+//    Console.WriteLine("6.Filter pending task");
+//    Console.WriteLine("7.Exit");
+//    Console.Write("enter your choice:");
+//    int choice=Convert.ToInt32(Console.ReadLine()); 
 
-    switch(choice)
-    {
-        case 1:
-            Console.Write("enter task id:");
-            int taskID=Convert.ToInt32(Console.ReadLine());
-            Console.Write("enter task description:");
-            string? description=Console.ReadLine();
-            task.AddTask(taskID,description,false);
-            break;
+//    switch(choice)
+//    {
+//        case 1:
+//            Console.Write("enter task id:");
+//            int taskID=Convert.ToInt32(Console.ReadLine());
+//            Console.Write("enter task description:");
+//            string? description=Console.ReadLine();
+//            task.AddTask(taskID,description,false);
+//            break;
 
-        case 2:
-            Console.Write("enter task id to remove:");
-            int id1=Convert.ToInt32(Console.ReadLine());
-            task.RemoveTask(id1);
-            break;
+//        case 2:
+//            Console.Write("enter task id to remove:");
+//            int id1=Convert.ToInt32(Console.ReadLine());
+//            task.RemoveTask(id1);
+//            break;
         
-        case 3:
-            Console.Write("enter task id to mark it as completed:");
-            int id2 = Convert.ToInt32(Console.ReadLine());
-            task.MarkAsCompleted(id2);
-            break;
+//        case 3:
+//            Console.Write("enter task id to mark it as completed:");
+//            int id2 = Convert.ToInt32(Console.ReadLine());
+//            task.MarkAsCompleted(id2);
+//            break;
 
-        case 4:
-            task.DisplayTask();
-            break;
+//        case 4:
+//            task.DisplayTask();
+//            break;
 
-        case 5:
-            task.FilterCompletedTask();
-            break;
+//        case 5:
+//            task.FilterCompletedTask();
+//            break;
 
-        case 6:
-            task.FilterPendingTask();
-            break;
+//        case 6:
+//            task.FilterPendingTask();
+//            break;
 
-        case 7:
-            Environment.Exit(0);
-            break; 
+//        case 7:
+//            Environment.Exit(0);
+//            break; 
 
-        default:
-            Console.WriteLine("Invalid choice");
-            break;
-    }
-}
+//        default:
+//            Console.WriteLine("Invalid choice");
+//            break;
+//    }
+//}
+FamilyTree familyTree = new FamilyTree();
+FamilyMember grandfather= new FamilyMember("Grand father",70);
+FamilyMember father = new FamilyMember("Father", 40);
+FamilyMember mother = new FamilyMember("Mother", 30);
+FamilyMember child = new FamilyMember("Child", 15);
 
+familyTree.AddMember(grandfather,father);
+familyTree.AddMember(grandfather,mother);
+familyTree.AddMember(father,child);
+
+Console.WriteLine("Family Tree:");
+familyTree.DisplayFamilyMember(grandfather);
 

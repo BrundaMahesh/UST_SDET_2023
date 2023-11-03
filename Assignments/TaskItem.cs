@@ -15,9 +15,9 @@ namespace Assignments
 
       
 
-        public void AddTask(TaskItem item)
+        public void AddTask(int taskID,string? taskDescription,bool isCompleted)
         {
-           taskItems.Add(item);
+           taskItems.Add(new TaskItem {TaskID=taskID, TaskDescription=taskDescription, IsCompleted=isCompleted });
         }
 
         public void RemoveTask(int taskID)
@@ -45,10 +45,8 @@ namespace Assignments
         {
             Console.WriteLine("To-Do list:");
             foreach (var item in taskItems)
-            {
-                string status = item.IsCompleted ? "Completed" : "Pending";
-                Console.WriteLine($"Task ID:{item.TaskID}, Task Description:{item.TaskDescription}, Status:{status}");
-                
+            {    
+                Console.WriteLine($"Task ID:{item.TaskID}, Task Description:{item.TaskDescription}, Task status:{item.IsCompleted}");   
             }
 
         }

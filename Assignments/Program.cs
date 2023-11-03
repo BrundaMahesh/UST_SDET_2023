@@ -397,10 +397,10 @@ while(true)
     {
         case 1:
             Console.Write("enter task id:");
-            task.TaskID=Convert.ToInt32(Console.ReadLine());
+            int taskID=Convert.ToInt32(Console.ReadLine());
             Console.Write("enter task description:");
-            task.TaskDescription=Console.ReadLine();
-            task.AddTask(task);
+            string? description=Console.ReadLine();
+            task.AddTask(taskID,description,false);
             break;
 
         case 2:

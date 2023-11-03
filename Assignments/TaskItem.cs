@@ -13,12 +13,6 @@ namespace Assignments
         public bool IsCompleted {  get; set; }
         public static List<TaskItem> taskItems = new List<TaskItem>();
 
-        public TaskItem(int taskID, string? taskDescription, bool isCompleted)
-        {
-            TaskID = taskID;
-            TaskDescription = taskDescription;
-            IsCompleted = isCompleted;
-        }
 
         public void AddTask(int taskID,string? taskDescription,bool isCompleted)
         {
@@ -49,7 +43,38 @@ namespace Assignments
         public void DisplayTask()
         {
             Console.WriteLine("To-Do list:");
+            foreach (var item in taskItems)
+            {
+                string status = item.IsCompleted ? "Completed" : "Pending";
+                Console.WriteLine($"Task ID:{item.TaskID}, Task Description:{item.TaskDescription}, Status:{status}");
+                
+            }
 
         }
-    }
+
+        public void FilterCompletedTask()
+        {
+            Console.WriteLine("Completed tasks:");
+            foreach (var item in taskItems)
+            {
+                if(item.IsCompleted)
+                {
+                    Console.WriteLine($"Task ID:{item.TaskID}, Task Description:{item.TaskDescription}");
+                }
+            }
+        }
+
+        public void FilterPendingTask()
+        {
+            Console.WriteLine("Pending tasks:");
+            foreach (var item in taskItems)
+            {
+                if (!item.IsCompleted)
+                {
+                    Console.WriteLine($"Task ID:{item.TaskID}, Task Description:{item.TaskDescription}");
+                }
+            }
+        }
+
+    }   
 }

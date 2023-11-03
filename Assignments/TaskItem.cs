@@ -72,10 +72,6 @@ namespace Assignments
                 {
                     Console.WriteLine($"Task ID:{item.TaskID}, Task Description:{item.TaskDescription}");
                 }
-                else
-                {
-                    Console.WriteLine("No pending tasks");
-                }
             }
         }
 

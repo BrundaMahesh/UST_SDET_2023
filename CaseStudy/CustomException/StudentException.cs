@@ -11,8 +11,8 @@ namespace CaseStudy.CustomException
         public static Dictionary<string, string> ErrorMessages { get; set; } = new Dictionary<string, string>()
         {
 
-            {"1","Product Id should be greater than zero"},
-            {"2","Product name cannot be null or empty"}
+            {"1","Course is full"},
+            {"2","Duplicate enrollment"}
 
         };
     }

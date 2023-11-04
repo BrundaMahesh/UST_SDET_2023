@@ -393,7 +393,7 @@ class Program
                     Console.Write("enter the instructor:");
                     string? instructor = Console.ReadLine();
                     Console.Write("enter maximum count:");
-                    int maxCount= Convert.ToInt32(Console.ReadLine());
+                    int maxCount = Convert.ToInt32(Console.ReadLine());
                     Course course = new Course();
                     course.CourseCode = code;
                     course.Title = title;
@@ -409,12 +409,13 @@ class Program
                     Console.WriteLine("Invalid choice");
                     break;
             }
+            
         }
+        
 
-
-        if(choice == 2)
+        if (choice == 2)
         {
-            Console.Write("Choose option: 1.Student Registration\n2.Course Registration\n3.Course Withdrawal\n4.Exit");
+            Console.Write("Choose option:\n1.Student Registration\n2.Course Registration\n3.Course Withdrawal\n4.Exit\n");
             switch(Convert.ToInt32(Console.ReadLine()))
             {
                 case 1:
@@ -431,10 +432,28 @@ class Program
                     student.studentList.Add(student);
                     break;
 
-                case 2: 
+                case 2:
+                    Console.WriteLine("Choose the course you want to enroll:");
+                    Course course= new Course();
+                    Student student1 = new Student();
+                    course.CourseRegistration(course, student1);
                     break;
+
+                case 3:
+                    break;
+
+                case 4:
+                    Environment.Exit(0);
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid choice");
+                    break;
+
             }
+
         }
+
     }
 }
 

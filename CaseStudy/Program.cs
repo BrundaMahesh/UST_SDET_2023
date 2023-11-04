@@ -378,82 +378,116 @@ class Program
     public static void Main(string[] args)
     {
         Console.WriteLine("*********Student Enrollment System***********");
-        Console.WriteLine("1.Admin\n2.Student");
-        int choice=Convert.ToInt32(Console.ReadLine());
-        if (choice == 1)
+        while (true)
         {
-            Console.WriteLine("Choose option\n1.Add Course\n2.Generate Report");
-            switch (Convert.ToInt32(Console.ReadLine()))
+            Console.WriteLine("1.Admin\n2.Student");
+            Console.Write("enter your choice:");
+            int choice = Convert.ToInt32(Console.ReadLine());
+            while (true)
             {
-                case 1:
-                    Console.Write("enter course code:");
-                    int code = Convert.ToInt32(Console.ReadLine());
-                    Console.Write("enter course title:");
-                    string? title = Console.ReadLine();
-                    Console.Write("enter the instructor:");
-                    string? instructor = Console.ReadLine();
-                    Console.Write("enter maximum count:");
-                    int maxCount = Convert.ToInt32(Console.ReadLine());
-                    Course course = new Course();
-                    course.CourseCode = code;
-                    course.Title = title;
-                    course.Instructor = instructor;
-                    course.MaxCount = maxCount;
-                    Course.courses.Add(course);
-                    break;
+                if (choice == 1)
+                {
+                    Console.WriteLine("Choose option\n1.Add Course\n2.Generate Report");
+                    switch (Convert.ToInt32(Console.ReadLine()))
+                    {
+                        case 1:
+                            Console.Write("enter course code:");
+                            int code = Convert.ToInt32(Console.ReadLine());
+                            Console.Write("enter course title:");
+                            string? title = Console.ReadLine();
+                            Console.Write("enter the instructor:");
+                            string? instructor = Console.ReadLine();
+                            Console.Write("enter maximum count:");
+                            int maxCount = Convert.ToInt32(Console.ReadLine());
+                            Course course = new Course();
+                            course.CourseCode = code;
+                            course.Title = title;
+                            course.Instructor = instructor;
+                            course.MaxCount = maxCount;
+                            Course.courses.Add(course);
+                            Console.WriteLine("Course added successfully!\n");
+                            break;
 
-                case 2:
-                    break;
+                        case 2:
+                            break;
 
-                default:
-                    Console.WriteLine("Invalid choice");
-                    break;
+                        default:
+                            Console.WriteLine("Invalid choice");
+                            break;
+                    }
+                    Console.WriteLine("Do you want to continue as Admin?\n1.Yes\n2.No");
+                    int optionAdmin = Convert.ToInt32(Console.ReadLine());
+                    if (optionAdmin == 1)
+                    {
+                        continue;
+                    }
+                    else if (optionAdmin == 2)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid input");
+                    }
+                }
+
+
+                if (choice == 2)
+                {
+                    Console.Write("Choose option:\n1.Student Registration\n2.Course Registration\n3.Course Withdrawal\n4.Exit\n");
+                    switch (Convert.ToInt32(Console.ReadLine()))
+                    {
+                        case 1:
+                            Console.Write("enter student id:");
+                            int id = Convert.ToInt32(Console.ReadLine());
+                            Console.Write("enter student name:");
+                            string? name = Console.ReadLine();
+                            Console.Write("enter email:");
+                            string? email = Console.ReadLine();
+                            Student student = new Student();
+                            student.StudentId = id;
+                            student.Name = name;
+                            student.Email = email;
+                            student.studentList.Add(student);
+                            Console.WriteLine("Student successfully registered!!\n");
+                            break;
+
+                        case 2:
+                            Console.WriteLine("Choose the course you want to enroll:");
+                            Course course = new Course();
+                            Student student1 = new Student();
+                            course.CourseRegistration(course, student1);
+                            break;
+
+                        case 3:
+                            break;
+
+                        case 4:
+                            Environment.Exit(0);
+                            break;
+
+                        default:
+                            Console.WriteLine("Invalid choice");
+                            break;
+
+                    }
+                    Console.WriteLine("Do you want to continue as Student?\n1.Yes\n2.No");
+                    int optionStudent = Convert.ToInt32(Console.ReadLine());
+                    if (optionStudent == 1)
+                    {
+                        continue;
+                    }
+                    else if (optionStudent == 2)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid input");
+                    }
+                }
             }
-            
         }
-        
-
-        if (choice == 2)
-        {
-            Console.Write("Choose option:\n1.Student Registration\n2.Course Registration\n3.Course Withdrawal\n4.Exit\n");
-            switch(Convert.ToInt32(Console.ReadLine()))
-            {
-                case 1:
-                    Console.Write("enter student id:");
-                    int id = Convert.ToInt32(Console.ReadLine());
-                    Console.Write("enter student name:");
-                    string? name = Console.ReadLine();
-                    Console.Write("enter email:");
-                    string? email = Console.ReadLine();
-                    Student student = new Student();
-                    student.StudentId = id;
-                    student.Name = name;
-                    student.Email = email;
-                    student.studentList.Add(student);
-                    break;
-
-                case 2:
-                    Console.WriteLine("Choose the course you want to enroll:");
-                    Course course= new Course();
-                    Student student1 = new Student();
-                    course.CourseRegistration(course, student1);
-                    break;
-
-                case 3:
-                    break;
-
-                case 4:
-                    Environment.Exit(0);
-                    break;
-
-                default:
-                    Console.WriteLine("Invalid choice");
-                    break;
-
-            }
-
-        }
-
     }
 }
 

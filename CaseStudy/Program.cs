@@ -448,7 +448,7 @@ class Program
                             student.StudentId = id;
                             student.Name = name;
                             student.Email = email;
-                            student.studentList.Add(student);
+                            student.Students.Add(student);
                             Console.WriteLine("Student successfully registered!!\n");
                             break;
 

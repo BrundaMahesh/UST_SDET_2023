@@ -12,6 +12,6 @@ namespace CaseStudy
         public string? Name { get; set; }
         public string? Email { get; set; }
 
-        public List<Student> studentList = new List<Student>();
+        public List<Student> Students = new List<Student>();
     }
 }

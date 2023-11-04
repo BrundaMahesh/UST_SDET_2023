@@ -19,37 +19,57 @@ namespace CaseStudy
         public List<Student> EnrolledStudent=new List<Student>();
 
 
-        public void CourseRegistration(Course course, Student student)
+        public void CourseRegistration(List<Student> Students)
         {
             foreach (var item in Course.courses)
             {
                 Console.WriteLine("Course code:" + item.CourseCode + "\t" + "Title" + item.Title + "\t" + "Instructor:" + item.Instructor);
             }
-            Console.Write("enter the course code do you want to enroll:");
-            int code = Convert.ToInt32(Console.ReadLine());
-            if (EnrolledStudent.Count >= MaxCount)
+            Console.WriteLine("Enter the Student Id:");
+            int id = Convert.ToInt32(Console.ReadLine());
+            var data = Students.Find(X => X.StudentId == id);
+            if (data != null)
             {
-                throw new EnrollmentException(StudentException.ErrorMessages["1"]);
+                Console.WriteLine("Enter the course code do you want to enroll");
+                int code = Convert.ToInt32(Console.ReadLine());
+                var value = courses.Find(x => x.CourseCode == code);
+                var item = EnrolledStudent.Find(x => x.StudentId == id);
+                if (EnrolledStudent.Count >= value.MaxCount)
+                {
+                    throw new EnrollmentException(StudentException.ErrorMessages["1"]);
 
+                }
+                else if (item != null)
+                {
+
+                    Console.WriteLine($"Student {data.StudentId} already enrolled in course {code}");
+                    throw new EnrollmentException(StudentException.ErrorMessages["2"]);
+                }
+
+                else
+                {
+                    value.EnrolledStudent.Add(data);
+                    Console.WriteLine($"Student successfully registered!! ");
+
+                }
             }
-            else if (EnrolledStudent.Contains(student))
+        }
+
+        public void CourseWithdrawal(int id)
+        {
+            var found = courses.Find(x => x.CourseCode == id);
+            var remove = found.EnrolledStudent.RemoveAll(x => x.StudentId == id);
+            if (remove != null)
             {
-                Console.WriteLine($"Student {student.StudentId} already enrolled in course {code}");
-                throw new EnrollmentException(StudentException.ErrorMessages["2"]);
+                Console.WriteLine("Course withdrawed!");
             }
             else
             {
-                EnrolledStudent.Add(student);
-                Console.WriteLine($"Student successfully registered for course {code} ");
+                Console.WriteLine("Course not withdrawed");
             }
         }
 
-        public void CourseWithdrawal(Course course)
-        {
-            throw new NotImplementedException();
-        }
 
-        
     }
 
    

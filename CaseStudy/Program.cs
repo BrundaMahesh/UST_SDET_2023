@@ -432,15 +432,16 @@ internal class Program
                             case 1:
                                 Console.Write("Enter the student Id:");
                                 int id = Convert.ToInt32(Console.ReadLine());
-                                Console.WriteLine("Enter the Name:");
+                                Console.Write("Enter the Name:");
                                 string? name = Console.ReadLine();
-                                Console.WriteLine("Enter the email id:");
+                                Console.Write("Enter the email id:");
                                 string? email = Console.ReadLine();
                                 Student student = new Student();
                                 student.StudentId = id;
                                 student.Name = name;
                                 student.Email = email;
                                 student.Students.Add(student);
+                                Console.WriteLine("Student registered successfully\n");
 
 
                                 break;
@@ -451,6 +452,7 @@ internal class Program
                                 Student student1 = new Student();
 
                                 course.CourseRegistration(student1.Students);
+                                Console.WriteLine("Course registered successfully\n");
                                 break;
                             case 3:
                                 Console.Write("Enter the course do you want to withdraw:");

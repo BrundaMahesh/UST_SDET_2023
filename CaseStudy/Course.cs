@@ -33,7 +33,7 @@ namespace CaseStudy
             var data = Students.Find(X => X.StudentId == id);
             if (data != null)
             {
-                Console.Write("Enter the course code do you want to enroll:");
+                Console.WriteLine("Enter the course code do you want to enroll");
                 int code = Convert.ToInt32(Console.ReadLine());
                 var value = courses.Find(x => x.CourseCode == code);
                 var item = EnrolledStudent.Find(x => x.StudentId == id);
@@ -51,12 +51,13 @@ namespace CaseStudy
 
                 else
                 {
-                    value.EnrolledStudent.Add(data);
+                    EnrolledStudent.Add(data);
                     Console.WriteLine($"Student successfully registered!! ");
-                    foreach (var item1 in EnrolledStudent)
+                    foreach (var student in EnrolledStudent)
                     {
-                        Console.WriteLine("Student id:"+item1.StudentId);
+                        Console.WriteLine("id:" + student.StudentId);
                     }
+
                 }
             }
         }

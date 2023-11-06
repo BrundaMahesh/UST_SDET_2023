@@ -7,16 +7,19 @@ using System.Threading.Tasks;
 
 namespace CaseStudy
 {
-    internal class Course:IEnrollable
+    internal class Course : IEnrollable
     {
-        public int CourseCode {  get; set; }    
+        public int CourseCode { get; set; }
         public string? Title { get; set; }
+
         public string? Instructor { get; set; }
-        public int MaxCount {  get; set; }
 
-        public static List<Course> courses = new List<Course>();    
+        public int MaxCount { get; set; }
 
-        public List<Student> EnrolledStudent=new List<Student>();
+        public static List<Course> courses = new List<Course>();
+
+        public List<Student> EnrolledStudent = new List<Student>();
+
 
 
         public void CourseRegistration(List<Student> Students)
@@ -30,7 +33,7 @@ namespace CaseStudy
             var data = Students.Find(X => X.StudentId == id);
             if (data != null)
             {
-                Console.WriteLine("Enter the course code do you want to enroll");
+                Console.Write("Enter the course code do you want to enroll:");
                 int code = Convert.ToInt32(Console.ReadLine());
                 var value = courses.Find(x => x.CourseCode == code);
                 var item = EnrolledStudent.Find(x => x.StudentId == id);
@@ -55,7 +58,7 @@ namespace CaseStudy
             }
         }
 
-        public void CourseWithdrawal(int id)
+        public void CourseWithdrawl(int id)
         {
             var found = courses.Find(x => x.CourseCode == id);
             var remove = found.EnrolledStudent.RemoveAll(x => x.StudentId == id);
@@ -68,9 +71,6 @@ namespace CaseStudy
                 Console.WriteLine("Course not withdrawed");
             }
         }
-
-
     }
 
-   
 }

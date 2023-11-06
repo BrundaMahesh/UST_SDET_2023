@@ -412,10 +412,41 @@ internal class Program
                                 course.MaxCount = count;
                                 Course.courses.Add(course);
                                 break;
+
+                            case 2:
+                                Course cc = new Course();
+                                Console.WriteLine("****All Courses****");
+                                foreach (var d in Course.courses)
+                                {
+                                    if (d != null)
+                                    {
+                                        Console.WriteLine($"Course Code:{d.CourseCode}\t Course Title:{d.Title}\tInstructor:{d.Instructor}");
+
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("No Courses Found !!!!");
+                                    }
+                                }
+
+                                Console.WriteLine("**** Enrolled Student Details****");
+                                foreach (var s in cc.EnrolledStudent)
+                                {
+                                    if (s != null)
+                                    {
+                                        Console.WriteLine($"Course Code:{cc.CourseCode}\t Course Title:{cc.Title}\tInstructor:{cc.Instructor}\t Student Id:{s.StudentId}" +
+                                            $"student Name:{s.Name}\tEmail:{s.Email}");
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("No Enrollment found!!!");
+                                    }
+                                }
+                                break;
                         }
                         Console.WriteLine("Do you want to continue as a admin\n1.Yes\n2.No");
-                        int opst = Convert.ToInt32(Console.ReadLine());
-                        if (opst == 1)
+                        int opadmin = Convert.ToInt32(Console.ReadLine());
+                        if (opadmin == 1)
                         {
                             continue;
                         }
@@ -460,6 +491,8 @@ internal class Program
                                 WithdrawAsync(eid);
                                 break;
 
+                                default: Console.WriteLine("Invalid choice");
+                                break;
 
                         }
                         Console.WriteLine("Do you want to continue as a student\n1.Yes\n2.No");

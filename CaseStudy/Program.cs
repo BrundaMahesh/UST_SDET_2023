@@ -435,7 +435,7 @@ internal class Program
                                     if (s != null)
                                     {
                                         Console.WriteLine($"Course Code:{cc.CourseCode}\t Course Title:{cc.Title}\tInstructor:{cc.Instructor}\t Student Id:{s.StudentId}" +
-                                            $"student Name:{s.Name}\tEmail:{s.Email}");
+                                            $"Student Name:{s.Name}\tEmail:{s.Email}");
                                     }
                                     else
                                     {

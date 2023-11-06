@@ -53,7 +53,10 @@ namespace CaseStudy
                 {
                     value.EnrolledStudent.Add(data);
                     Console.WriteLine($"Student successfully registered!! ");
-
+                    foreach (var item1 in EnrolledStudent)
+                    {
+                        Console.WriteLine("Student id:"+item1.StudentId);
+                    }
                 }
             }
         }

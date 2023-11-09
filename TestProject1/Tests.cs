@@ -6,7 +6,7 @@ namespace TestProject1
         [Test]
         public void Test1()
         {
-            Assert.Pass();
+            Assert.AreEqual(10, 10);
         }
     }
 }
